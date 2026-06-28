@@ -11,6 +11,8 @@
     <!-- section 1 -->
     <section id="section1">
         <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
             * {
                 box-sizing: border-box;
             }
@@ -25,7 +27,11 @@
                 position: relative;
             }
 
-            h1 {
+            #section1>div {
+                position: relative;
+            }
+
+            #section1 h1 {
                 position: absolute;
                 color: #FFF;
                 font-family: Inter, sans-serif;
@@ -35,10 +41,13 @@
                 line-height: 45.7px;
                 width: 250px;
                 top: 50%;
-                margin: 0 0 0 100px;
+                left: 100px;
+                transform: translateY(-50%);
+                margin: 0;
+                z-index: 1;
             }
 
-            img {
+            #section1 img {
                 display: block;
                 width: 100%;
                 height: auto;
@@ -46,30 +55,33 @@
             }
 
             @media (min-width: 1024px) and (max-width: 1440px) {
-                h1 {
+                #section1 h1 {
                     font-size: 38px;
                     top: 40%;
-                    margin: 0 0 0 80px;
+                    left: 40px;
+                    transform: translateY(-50%);
                 }
             }
 
             @media (max-width: 768px) {
-                h1 {
+                #section1 h1 {
                     font-size: 30px;
                     line-height: 36px;
                     width: 280px;
                     top: 50%;
-                    margin: 0 0 50px 40px;
+                    left: 40px;
+                    transform: translateY(-50%);
                 }
             }
 
             @media (max-width: 425px) {
-                h1 {
+                #section1 h1 {
                     font-size: 32.131px;
                     line-height: 34.5px;
                     width: 70%;
-                    top: 80%;
-                    margin: 0 0 50px 20px;
+                    top: 75%;
+                    left: 20px;
+                    transform: translateY(-50%);
                 }
             }
         </style>
@@ -93,22 +105,34 @@
 
             #section2 .section2-wrapper {
                 position: relative;
+                display: grid;
+            }
+
+            #section2 .section2-wrapper picture {
+                grid-area: 1 / 1;
+                display: block;
+            }
+
+            #section2 .section2-wrapper picture,
+            #section2 .section2-content {
+                grid-area: 1 / 1;
             }
 
             #section2 .section2-wrapper img {
                 display: block;
                 width: 100%;
-                height: auto;
+                height: 100%;
+                min-height: 100%;
                 object-fit: cover;
             }
 
             #section2 .section2-content {
-                position: absolute;
-                top: 50%;
-                left: 0;
-                transform: translateY(-50%);
-                width: 20%;
-                margin: 0 0 50px 100px;
+                align-self: center;
+                justify-self: start;
+                width: 38%;
+                max-width: 480px;
+                padding: 40px 24px 40px 100px;
+                z-index: 1;
             }
 
             #section2 h2 {
@@ -147,47 +171,51 @@
                 text-decoration: none;
             }
 
-            @media (max-width: 1024px) and (max-width: 1440px) {
+            @media (min-width: 1024px) and (max-width: 1440px) {
                 #section2 .section2-content {
                     width: 50%;
-                    margin: 0 0 0 80px;
+                    max-width: 520px;
+                    padding: 32px 20px 32px 40px;
+                }
+            }
+
+            @media (max-width: 1024px) {
+                #section2 .section2-content {
+                    width: 55%;
+                    max-width: none;
+                    padding: 32px 20px 32px 40px;
                 }
             }
 
             @media (max-width: 768px) {
                 #section2 .section2-content {
-                    width: 80%;
-                    padding: 40px 30px 40px 40px;
-                }
-
-                #section2 h2 {
-                    font-size: 26px;
-                    line-height: 34px;
-                }
-
-                #section2 p {
-                    font-size: 15px;
-                    line-height: 22px;
-                }
-            }
-
-            @media (max-width: 425px) {
-                #section2 .section2-content {
-                    width: 90%;
-                    padding: 0;
-                    top: 33%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
+                    width: 75%;
+                    padding: 28px 24px;
                 }
 
                 #section2 h2 {
                     font-size: 22px;
                     line-height: 28px;
+                    margin-bottom: 16px;
                 }
 
                 #section2 p {
-                    font-size: 14px;
-                    line-height: 20px;
+                    font-size: 12px;
+                    line-height: 17px;
+                    margin-bottom: 14px;
+                }
+            }
+
+            @media (max-width: 425px) {
+                #section2 .section2-content {
+                    width: 100%;
+                    padding: 32px 20px 40px;
+                    align-self: start;
+                }
+
+                #section2 h2 {
+                    font-size: 22px;
+                    line-height: 28px;
                 }
 
                 #section2 .section2-btn {
@@ -216,6 +244,1260 @@
                 <a href="#" class="section2-btn">Explore Current Opportunities</a>
             </div>
         </div>
+    </section>
+    <!-- section 3 -->
+    <section id="section3">
+        <style>
+            #section3 {
+                position: relative;
+            }
+
+            #section3 .section3-wrapper {
+                position: relative;
+                display: grid;
+            }
+
+            #section3 .section3-banner {
+                grid-area: 1 / 1;
+            }
+
+            #section3 .section3-banner,
+            #section3 .section3-content {
+                grid-area: 1 / 1;
+            }
+
+            #section3 .section3-banner img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                min-height: 100%;
+                object-fit: cover;
+            }
+
+            #section3 .section3-content {
+                z-index: 2;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                padding: 50px 70px;
+            }
+
+            #section3 .section3-intro {
+                max-width: 720px;
+                margin-bottom: 36px;
+            }
+
+            #section3 .section3-intro h2 {
+                color: #FFF;
+                text-align: center;
+                font-family: Inter, sans-serif;
+                font-size: 25px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 35.5px;
+                margin: 0 0 16px;
+            }
+
+            #section3 .section3-intro p {
+                color: #FFF;
+                text-align: center;
+                font-family: Inter, sans-serif;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 18px;
+                margin: 0;
+            }
+
+            #section3 .section3-cards {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 14px;
+                width: 100%;
+                margin: auto;
+            }
+
+            #section3 .section3-card {
+                width: 210px;
+                min-height: 218.684px;
+                height: auto;
+                flex-shrink: 0;
+                border-radius: 16.077px;
+                border: 0.473px solid #D9D9D9;
+                padding: 18px 14px;
+            }
+
+            #section3 .section3-card-header {
+                display: flex;
+                align-items: flex-start;
+                gap: 6px;
+                margin-bottom: 10px;
+                min-height: 32px;
+            }
+
+            #section3 .section3-card-icon {
+                width: 16px;
+                height: 16px;
+                flex-shrink: 0;
+                margin-top: 0;
+            }
+
+            #section3 .section3-card h3 {
+                flex: 1;
+                min-width: 0;
+                color: #FFF;
+                font-family: Inter, sans-serif;
+                font-size: 11.349px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 14px;
+                margin: 0;
+            }
+
+            #section3 .section3-card p {
+                color: #FFF;
+                font-family: Inter, sans-serif;
+                font-size: 11.349px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 17.023px;
+                margin: 0;
+            }
+
+            @media (max-width: 1024px) {
+                #section3 .section3-content {
+                    padding: 40px 40px 44px;
+                }
+
+                #section3 .section3-card {
+                    width: 170px;
+                    min-height: 218.684px;
+                    height: auto;
+                }
+            }
+
+            @media (max-width: 768px) {
+                #section3 .section3-content {
+                    padding: 36px 24px 40px;
+                }
+
+                #section3 .section3-intro h2 {
+                    font-size: 22px;
+                    line-height: 30px;
+                }
+            }
+
+            @media (max-width: 425px) {
+                #section3 .section3-intro {
+                    margin-bottom: 24px;
+                    text-align: left;
+                }
+
+                #section3 .section3-intro h2,
+                #section3 .section3-intro p {
+                    text-align: left;
+                }
+
+                #section3 .section3-content {
+                    padding: 32px 16px 40px;
+                    align-self: start;
+                }
+
+                #section3 .section3-cards {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 12px;
+                    align-items: start;
+                }
+
+                #section3 .section3-card {
+                    width: 100%;
+                    max-width: none;
+                    height: auto;
+                }
+            }
+        </style>
+        <div class="section3-wrapper">
+            <picture class="section3-banner">
+                <source
+                    srcset="https://cmsuatlupin.blob.core.windows.net/public/uploads/section3_mbl_banner_dc1a0ac0a7.png"
+                    media="(max-width: 425px)" type="image/png">
+                <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/section3_banner_9cde9a16cb.png"
+                    alt="Lupin Careers">
+            </picture>
+            <div class="section3-content">
+                <div class="section3-intro">
+                    <h2>Start Your Journey With Us</h2>
+                    <p>If you are ready to learn, grow, and make an impact early on, we are here to help you. Through
+                        our
+                        partnerships with leading institutions and immersive learning opportunities, we invest in talent
+                        that will help shape the future of healthcare.</p>
+                </div>
+                <div class="section3-cards">
+                    <div class="section3-card">
+                        <div class="section3-card-header">
+                            <img class="section3-card-icon"
+                                src="https://cmsuatlupin.blob.core.windows.net/public/uploads/petal_e45c6fdf5d.svg"
+                                alt="">
+                            <h3>Internship Program</h3>
+                        </div>
+                        <p>Work on real-world projects, collaborate with experienced teams, and gain valuable exposure
+                            to
+                            the healthcare industry.</p>
+                    </div>
+                    <div class="section3-card">
+                        <div class="section3-card-header">
+                            <img class="section3-card-icon"
+                                src="https://cmsuatlupin.blob.core.windows.net/public/uploads/petal_e45c6fdf5d.svg"
+                                alt="">
+                            <h3>Graduate Engineer Trainee<br>Program</h3>
+                        </div>
+                        <p>Build technical expertise and prepare for long-term growth through a structured development
+                            journey designed to strengthen both knowledge and practical experience.</p>
+                    </div>
+                    <div class="section3-card">
+                        <div class="section3-card-header">
+                            <img class="section3-card-icon"
+                                src="https://cmsuatlupin.blob.core.windows.net/public/uploads/petal_e45c6fdf5d.svg"
+                                alt="">
+                            <h3>Management Trainee<br>Program</h3>
+                        </div>
+                        <p>Gain cross-functional exposure and hands-on experience that helps build a strong foundation
+                            for
+                            future leadership opportunities.</p>
+                    </div>
+                    <div class="section3-card">
+                        <div class="section3-card-header">
+                            <img class="section3-card-icon"
+                                src="https://cmsuatlupin.blob.core.windows.net/public/uploads/petal_e45c6fdf5d.svg"
+                                alt="">
+                            <h3>Scholarship Program</h3>
+                        </div>
+                        <p>Be recognized through the Lupin Scholar Award, with financial support extended to
+                            high-potential
+                            students pursuing academic excellence.</p>
+                    </div>
+                    <div class="section3-card">
+                        <div class="section3-card-header">
+                            <img class="section3-card-icon"
+                                src="https://cmsuatlupin.blob.core.windows.net/public/uploads/petal_e45c6fdf5d.svg"
+                                alt="">
+                            <h3>Research Internship<br>Program</h3>
+                        </div>
+                        <p>Experience immersive research through the Lupin Program for Research Interns (LPRI), learning
+                            under expert mentorship at Lupin Research Park and building pathways to scientific careers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section 4 -->
+    <section id="section4">
+        <style>
+            #section4 {
+                background-color: #55968f;
+                padding: 50px 100px 60px;
+                overflow: hidden;
+            }
+
+            #section4 .section4-wrapper {
+                position: relative;
+            }
+
+            #section4 .section4-header {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 36px;
+                min-height: 72px;
+            }
+
+            #section4 .section4-intro {
+                max-width: 540px;
+                text-align: center;
+            }
+
+            #section4 .section4-intro h2 {
+                color: #FFF;
+                font-family: Inter, sans-serif;
+                font-size: 25px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 35.5px;
+                margin: 0 0 12px;
+            }
+
+            #section4 .section4-intro p {
+                color: #FFF;
+                font-family: Inter, sans-serif;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 18px;
+                margin: 0;
+            }
+
+            #section4 .section4-nav {
+                position: absolute;
+                right: 0;
+                top: 50px;
+                display: flex;
+                gap: 10px;
+            }
+
+            #section4 .section4-nav button {
+                width: 42px;
+                height: 42px;
+                border-radius: 50%;
+                border: none;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 20px;
+                line-height: 1;
+                padding: 0;
+            }
+
+            #section4 .section4-prev {
+                background: rgba(0, 0, 0, 0.25);
+                color: #FFF;
+            }
+
+            #section4 .section4-next {
+                background: #FFF;
+                color: #2d6b64;
+            }
+
+            #section4 .section4-nav button:disabled {
+                opacity: 0.4;
+                cursor: not-allowed;
+            }
+
+            #section4 .section4-slider {
+                overflow: hidden;
+                width: 100%;
+            }
+
+            #section4 .section4-track {
+                display: flex;
+                gap: 16px;
+                transition: transform 0.4s ease;
+                will-change: transform;
+            }
+
+            @media (max-width: 768px) {
+                #section4 .section4-track {
+                    gap: 12px;
+                }
+            }
+
+            #section4 .section4-slide {
+                flex: 0 0 calc((100% - 32px) / 3);
+            }
+
+            #section4 .section4-slide img {
+                display: block;
+                width: 100%;
+                height: auto;
+                border-radius: 14px;
+                object-fit: cover;
+            }
+
+            @media (max-width: 1024px) {
+                #section4 {
+                    padding: 40px 40px 50px;
+                }
+
+                #section4 .section4-slide {
+                    flex: 0 0 calc((100% - 16px) / 2);
+                }
+            }
+
+            @media (max-width: 768px) {
+                #section4 {
+                    padding: 32px 20px 40px;
+                    overflow: hidden;
+                }
+
+                #section4 .section4-header {
+                    justify-content: flex-start;
+                    min-height: auto;
+                    margin-bottom: 20px;
+                }
+
+                #section4 .section4-intro {
+                    max-width: none;
+                    text-align: left;
+                }
+
+                #section4 .section4-nav {
+                    position: static;
+                    transform: none;
+                    justify-content: center;
+                    margin-top: 24px;
+                }
+
+                #section4 .section4-slider {
+                    overflow: visible;
+                }
+
+                #section4 .section4-slide {
+                    flex: 0 0 82%;
+                }
+
+                #section4 .section4-slide img {
+                    border-radius: 22px;
+                }
+            }
+        </style>
+        <div class="section4-wrapper">
+            <div class="section4-header">
+                <div class="section4-intro">
+                    <h2>Step Inside Life at Lupin</h2>
+                    <p>At Lupin, we have built an inclusive ecosystem that drives employees to consistently do their
+                        best. Across functions, experiences, and locations, we foster a culture built on trust,
+                        collaboration, and shared purpose.</p>
+                </div>
+            </div>
+            <div class="section4-slider">
+                <div class="section4-track">
+                    <div class="section4-slide">
+                        <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/slider_1_a7660c7d32.png"
+                            alt="Colleagues collaborating in an office">
+                    </div>
+                    <div class="section4-slide">
+                        <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/slider_2_6c9eeabe61.png"
+                            alt="Team in laboratory facility">
+                    </div>
+                    <div class="section4-slide">
+                        <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/slider_3_01f4a1ae78.png"
+                            alt="Lupin team group photo">
+                    </div>
+                    <div class="section4-slide">
+                        <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/slider_1_a7660c7d32.png"
+                            alt="Colleagues collaborating in an office">
+                    </div>
+                    <div class="section4-slide">
+                        <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/slider_2_6c9eeabe61.png"
+                            alt="Team in laboratory facility">
+                    </div>
+                    <div class="section4-slide">
+                        <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/slider_3_01f4a1ae78.png"
+                            alt="Lupin team group photo">
+                    </div>
+                </div>
+            </div>
+            <div class="section4-nav">
+                <button type="button" class="section4-prev" aria-label="Previous slide">&#8249;</button>
+                <button type="button" class="section4-next" aria-label="Next slide">&#8250;</button>
+            </div>
+        </div>
+        <script>
+            (function () {
+                var section = document.getElementById('section4');
+                var track = section.querySelector('.section4-track');
+                var slides = section.querySelectorAll('.section4-slide');
+                var prevBtn = section.querySelector('.section4-prev');
+                var nextBtn = section.querySelector('.section4-next');
+                var currentIndex = 0;
+
+                function getGap() {
+                    return window.innerWidth <= 768 ? 12 : 16;
+                }
+
+                function getSlidesToShow() {
+                    if (window.innerWidth <= 768) {
+                        return 1;
+                    }
+                    if (window.innerWidth <= 1024) {
+                        return 2;
+                    }
+                    return 3;
+                }
+
+                function getMaxIndex() {
+                    return Math.max(0, slides.length - getSlidesToShow());
+                }
+
+                function updateSlider() {
+                    var maxIndex = getMaxIndex();
+                    var gap = getGap();
+
+                    if (currentIndex > maxIndex) {
+                        currentIndex = maxIndex;
+                    }
+                    if (currentIndex < 0) {
+                        currentIndex = 0;
+                    }
+
+                    var slideWidth = slides[0].getBoundingClientRect().width;
+                    track.style.transform = 'translateX(-' + (currentIndex * (slideWidth + gap)) + 'px)';
+
+                    prevBtn.disabled = currentIndex === 0;
+                    nextBtn.disabled = currentIndex >= maxIndex;
+                }
+
+                prevBtn.addEventListener('click', function () {
+                    if (currentIndex > 0) {
+                        currentIndex--;
+                        updateSlider();
+                    }
+                });
+
+                nextBtn.addEventListener('click', function () {
+                    if (currentIndex < getMaxIndex()) {
+                        currentIndex++;
+                        updateSlider();
+                    }
+                });
+
+                window.addEventListener('resize', updateSlider);
+                updateSlider();
+            })();
+        </script>
+    </section>
+    <!-- section 5 -->
+    <section id="section5">
+        <style>
+            #section5 {
+                position: relative;
+                overflow: hidden;
+            }
+
+            #section5 .section5-wrapper {
+                position: relative;
+                display: grid;
+            }
+
+            #section5 .section5-banner,
+            #section5 .section5-content {
+                grid-area: 1 / 1;
+            }
+
+            #section5 .section5-banner img {
+                display: block;
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+
+            #section5 .section5-content {
+                align-self: center;
+                justify-self: start;
+                width: 30%;
+                padding: 0 0 0 100px;
+                z-index: 2;
+            }
+
+            #section5 .section5-content h2 {
+                color: #FFF;
+                font-family: Inter, sans-serif;
+                font-size: 25px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 35.5px;
+                margin: 0 0 20px;
+            }
+
+            #section5 .section5-content p {
+                color: #FFF;
+                font-family: Inter, sans-serif;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 18px;
+                margin: 0 0 16px;
+            }
+
+            #section5 .section5-content p:last-of-type {
+                margin-bottom: 28px;
+            }
+
+            #section5 .section5-btn {
+                display: inline-block;
+                border-radius: 16.953px;
+                background: #FFF;
+                color: #08A03F;
+                font-family: D-DIN, sans-serif;
+                font-size: 14.962px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 17.527px;
+                padding: 12px 28px;
+                border: none;
+                cursor: pointer;
+                text-decoration: none;
+            }
+
+            @media (max-width: 1024px) {
+                #section5 .section5-content {
+                    width: 50%;
+                    max-width: 420px;
+                    padding: 0 0 0 60px;
+                }
+            }
+
+            @media (max-width: 768px) {
+                #section5 .section5-content {
+                    width: 75%;
+                    padding: 32px 24px;
+                }
+
+                #section5 .section5-content h2 {
+                    font-size: 22px;
+                    line-height: 30px;
+                }
+
+                #section5 .section5-content p {
+                    font-size: 12px;
+                    line-height: 18px;
+                }
+            }
+
+            @media (max-width: 425px) {
+                #section5 .section5-content {
+                    width: 80%;
+                    padding: 0 0 0 20px;
+                    align-self: start;
+                    margin-top: 8%;
+                }
+            }
+        </style>
+        <div class="section5-wrapper">
+            <picture class="section5-banner">
+                <source
+                    srcset="https://cmsuatlupin.blob.core.windows.net/public/uploads/section5_mbl_banner_345a123966.png"
+                    media="(max-width: 425px)" type="image/png">
+                <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/section5_v2_banner_551e2b398f.png"
+                    alt="Person standing on a mountain overlooking misty valleys">
+            </picture>
+            <div class="section5-content">
+                <h2>Values That Define Us</h2>
+                <p>Integrity, Passion for Excellence, Teamwork, Entrepreneurial Spirit, Respect and Care, and Customer
+                    Focus are our values that guide us.</p>
+                <p>These values shape how we work together, support one another, and create meaningful impact for
+                    patients around the world. They drive our decisions, strengthen our culture, and help us stay
+                    accountable to the purpose we serve every day.</p>
+                <a href="#" class="section5-btn">Explore Our Values</a>
+            </div>
+        </div>
+    </section>
+    <!-- section 6 -->
+    <section id="section6">
+        <style>
+            #section6 {
+                position: relative;
+            }
+
+            #section6 .section6-wrapper {
+                position: relative;
+                display: grid;
+            }
+
+            #section6 .section6-banner,
+            #section6 .section6-content {
+                grid-area: 1 / 1;
+            }
+
+            #section6 .section6-banner img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                min-height: 100%;
+                object-fit: cover;
+            }
+
+            #section6 .section6-content {
+                align-self: center;
+                justify-self: stretch;
+                width: 100%;
+                box-sizing: border-box;
+                padding: 40px 72px 40px 54%;
+                z-index: 2;
+                text-align: left;
+            }
+
+            #section6 .section6-content h2,
+            #section6 .section6-content p {
+                max-width: 480px;
+            }
+
+            #section6 .section6-content h2 {
+                color: #FFF;
+                font-family: Inter, sans-serif;
+                font-size: 25px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 35.5px;
+                margin: 0 0 20px;
+            }
+
+            #section6 .section6-content p {
+                color: #FFF;
+                font-family: Inter, sans-serif;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 18px;
+                margin: 0 0 14px;
+            }
+
+            #section6 .section6-content p:last-of-type {
+                margin-bottom: 0;
+            }
+
+            @media (max-width: 1024px) {
+                #section6 .section6-content {
+                    padding: 32px 56px 32px 52%;
+                }
+
+                #section6 .section6-content h2,
+                #section6 .section6-content p {
+                    max-width: 420px;
+                }
+            }
+
+            @media (max-width: 768px) {
+                #section6 .section6-content {
+                    padding: 28px 40px 28px 50%;
+                }
+
+                #section6 .section6-content h2,
+                #section6 .section6-content p {
+                    max-width: 360px;
+                }
+
+                #section6 .section6-content h2 {
+                    font-size: 22px;
+                    line-height: 30px;
+                }
+            }
+
+            @media (max-width: 425px) {
+                #section6 .section6-content {
+                    width: 90%;
+                    max-width: none;
+                    padding: 36px 20px 0;
+                    align-self: start;
+                    justify-self: stretch;
+                }
+
+                #section6 .section6-content h2,
+                #section6 .section6-content p {
+                    max-width: none;
+                }
+
+                #section6 .section6-content h2 {
+                    font-size: 22px;
+                    line-height: 28px;
+                    margin-bottom: 16px;
+                }
+
+                #section6 .section6-content p {
+                    font-size: 12px;
+                    line-height: 18px;
+                    margin-bottom: 12px;
+                }
+            }
+        </style>
+        <div class="section6-wrapper">
+            <picture class="section6-banner">
+                <source
+                    srcset="https://cmsuatlupin.blob.core.windows.net/public/uploads/section6_mbl_banner_7ad130bb86.png"
+                    media="(max-width: 425px)" type="image/png">
+                <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/section6_banner_ed88d3f714.png"
+                    alt="Diverse professionals collaborating outside a modern office building">
+            </picture>
+            <div class="section6-content">
+                <h2>Committed to an Inclusive and Equal Workplace</h2>
+                <p>At Lupin, we believe in fostering an inclusive workplace where everyone feels welcomed, respected,
+                    supported, and inspired to contribute fully.</p>
+                <p>As an equal opportunity employer, we provide a workplace free from discrimination and creating
+                    opportunities based on potential and merit.</p>
+                <p>Through established Employee Resource Groups, continuous sensitization programs, return-to-work
+                    initiatives, we create an environment where individuals can grow at every stage of their careers.
+                </p>
+                <p>Our focus on gender neutrality, inclusive hiring, accessibility, and dedicated DEI programs reflects
+                    our belief that diverse teams build stronger solutions, stronger communities, and a stronger future.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- section 7 -->
+    <section id="section7">
+        <style>
+            #section7 {
+                position: relative;
+            }
+
+            #section7 .section7-wrapper {
+                position: relative;
+                display: grid;
+            }
+
+            #section7 .section7-banner,
+            #section7 .section7-content {
+                grid-area: 1 / 1;
+            }
+
+            #section7 .section7-banner img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                min-height: 100%;
+                object-fit: cover;
+            }
+
+            #section7 .section7-content {
+                align-self: center;
+                justify-self: stretch;
+                width: 100%;
+                box-sizing: border-box;
+                padding: 40px 48% 40px 100px;
+                z-index: 2;
+                text-align: left;
+            }
+
+            #section7 .section7-content h2,
+            #section7 .section7-content p {
+                max-width: 480px;
+            }
+
+            #section7 .section7-content h2 {
+                color: #FFF;
+                font-family: Inter, sans-serif;
+                font-size: 25px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 35.5px;
+                margin: 0 0 20px;
+            }
+
+            #section7 .section7-content p {
+                color: #FFF;
+                font-family: Inter, sans-serif;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 18px;
+                margin: 0 0 14px;
+            }
+
+            #section7 .section7-content p:last-of-type {
+                margin-bottom: 0;
+            }
+
+            @media (max-width: 1024px) {
+                #section7 .section7-content {
+                    padding: 32px 46% 32px 60px;
+                }
+
+                #section7 .section7-content h2,
+                #section7 .section7-content p {
+                    max-width: 420px;
+                }
+            }
+
+            @media (max-width: 768px) {
+                #section7 .section7-content {
+                    padding: 28px 44% 28px 40px;
+                }
+
+                #section7 .section7-content h2,
+                #section7 .section7-content p {
+                    max-width: 360px;
+                }
+
+                #section7 .section7-content h2 {
+                    font-size: 22px;
+                    line-height: 30px;
+                }
+            }
+
+            @media (max-width: 425px) {
+                #section7 .section7-content {
+                    width: 90%;
+                    max-width: none;
+                    padding: 36px 20px 0;
+                    align-self: start;
+                    justify-self: stretch;
+                }
+
+                #section7 .section7-content h2,
+                #section7 .section7-content p {
+                    max-width: none;
+                }
+
+                #section7 .section7-content h2 {
+                    font-size: 22px;
+                    line-height: 28px;
+                    margin-bottom: 16px;
+                }
+
+                #section7 .section7-content p {
+                    font-size: 12px;
+                    line-height: 18px;
+                    margin-bottom: 12px;
+                }
+            }
+        </style>
+        <div class="section7-wrapper">
+            <picture class="section7-banner">
+                <source
+                    srcset="https://cmsuatlupin.blob.core.windows.net/public/uploads/section7_mbl_banner_7586554e47.png"
+                    media="(max-width: 425px)" type="image/png">
+                <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/section7_banner_96186f1370.png"
+                    alt="Professionals smiling together in a modern office">
+            </picture>
+            <div class="section7-content">
+                <h2>Empowering Growth Through Continuous Learning</h2>
+                <p>Our learning and development programs are designed to help you stay relevant, build new capabilities,
+                    and prepare for what comes next. Across roles and levels, employees have access to structured
+                    learning, real-world exposure, and opportunities to grow within the organization.</p>
+                <p>For high-performing talent and aspiring scientists, our ASCENT program offers the opportunity to
+                    pursue a fully supported PhD, combining academic depth with practical impact and reinforcing our
+                    commitment to lifelong learning.</p>
+            </div>
+        </div>
+    </section>
+    <!-- section 8 -->
+    <section id="section8">
+        <style>
+            #section8 {
+                position: relative;
+            }
+
+            #section8 .section8-wrapper {
+                position: relative;
+                display: grid;
+            }
+
+            #section8 .section8-banner,
+            #section8 .section8-layout {
+                grid-area: 1 / 1;
+            }
+
+            #section8 .section8-banner img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                min-height: 100%;
+                object-fit: cover;
+            }
+
+            #section8 .section8-layout {
+                z-index: 2;
+                display: grid;
+                grid-template-columns: 36% 1fr;
+                grid-template-rows: auto 1fr;
+                align-items: center;
+                gap: 16px 40px;
+                padding: 50px 80px;
+                box-sizing: border-box;
+                width: 100%;
+                min-width: 0;
+            }
+
+            #section8 .section8-intro {
+                grid-column: 1;
+                grid-row: 1 / span 2;
+                align-self: center;
+            }
+
+            #section8 .section8-intro h2 {
+                color: #FFF;
+                font-family: Inter, sans-serif;
+                font-size: 25px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 35.5px;
+                margin: 0 0 16px;
+            }
+
+            #section8 .section8-intro p {
+                color: #FFF;
+                font-family: Inter, sans-serif;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 18px;
+                margin: 0 0 24px;
+            }
+
+            #section8 .section8-btn {
+                display: inline-block;
+                border-radius: 16.953px;
+                background: #FFF;
+                color: #000;
+                font-family: D-DIN, sans-serif;
+                font-size: 14.962px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 17.527px;
+                padding: 12px 28px;
+                border: none;
+                cursor: pointer;
+                text-decoration: none;
+            }
+
+            #section8 .section8-nav {
+                grid-column: 2;
+                grid-row: 1;
+                justify-self: end;
+                display: flex;
+                gap: 10px;
+            }
+
+            #section8 .section8-nav button {
+                width: 42px;
+                height: 42px;
+                border-radius: 50%;
+                border: none;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 20px;
+                line-height: 1;
+                padding: 0;
+            }
+
+            #section8 .section8-prev {
+                background: rgba(255, 255, 255, 0.2);
+                color: #FFF;
+            }
+
+            #section8 .section8-next {
+                background: #FFF;
+                color: #333;
+            }
+
+            #section8 .section8-nav button:disabled {
+                opacity: 0.4;
+                cursor: not-allowed;
+            }
+
+            #section8 .section8-slider {
+                grid-column: 2;
+                grid-row: 2;
+                overflow: hidden;
+                width: calc(100% + 80px);
+                margin-right: -80px;
+                min-width: 0;
+            }
+
+            #section8 .section8-track {
+                display: flex;
+                gap: 16px;
+                transition: transform 0.4s ease;
+                will-change: transform;
+            }
+
+            #section8 .section8-slide {
+                flex: 0 0 calc((100% - 32px) / 2.5);
+                min-width: 0;
+            }
+
+            #section8 .section8-slide img {
+                display: block;
+                width: 100%;
+                height: auto;
+                border-radius: 14px;
+                object-fit: cover;
+            }
+
+            @media (max-width: 1024px) {
+                #section8 .section8-layout {
+                    padding: 40px 40px 44px;
+                }
+
+                #section8 .section8-slider {
+                    width: calc(100% + 40px);
+                    margin-right: -40px;
+                }
+            }
+
+            @media (max-width: 768px) {
+                #section8 {
+                    overflow: hidden;
+                }
+
+                #section8 .section8-layout {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: stretch;
+                    padding: 32px 20px 40px;
+                    gap: 0;
+                }
+
+                #section8 .section8-intro {
+                    width: 70%;
+                    margin-bottom: 20px;
+                    margin-right: auto;
+                }
+
+                #section8 .section8-slider {
+                    overflow: visible;
+                    width: 100%;
+                    margin-right: 0;
+                    order: 2;
+                }
+
+                #section8 .section8-track {
+                    gap: 12px;
+                }
+
+                #section8 .section8-slide {
+                    flex: 0 0 82%;
+                }
+
+                #section8 .section8-slide img {
+                    border-radius: 22px;
+                }
+
+                #section8 .section8-nav {
+                    position: static;
+                    justify-content: center;
+                    margin-top: 24px;
+                    order: 3;
+                }
+            }
+            @media (max-width: 425px) {
+                #section8 .section8-intro{
+                    width: 90%;
+                }
+            }
+        </style>
+        <div class="section8-wrapper">
+            <picture class="section8-banner">
+                <source
+                    srcset="https://cmsuatlupin.blob.core.windows.net/public/uploads/section8_mbl_banner_2d793a2dd8.png"
+                    media="(max-width: 425px)" type="image/png">
+                <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/section8_banner_8ab3cd628e.png"
+                    alt="Awards and recognition background">
+            </picture>
+            <div class="section8-layout">
+                <div class="section8-intro">
+                    <h2>Our Awards and Recognition</h2>
+                    <p>We are proud to be Great Place to Work® certified globally, with many employees reporting high
+                        engagement, satisfaction, and wellbeing. This reflects our culture that is grounded in trust,
+                        fairness, and inclusion across our 13 geographies.</p>
+                    <a href="#" class="section8-btn">Explore Our Achievements</a>
+                </div>
+                <div class="section8-slider">
+                    <div class="section8-track">
+                        <div class="section8-slide">
+                            <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/awards_slider_1_e9ea6e1df4.png"
+                                alt="Hand holding a silver trophy at sunset">
+                        </div>
+                        <div class="section8-slide">
+                            <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/awards_slider_2_8415703e0e.png"
+                                alt="Great Place To Work Certified award on office wall">
+                        </div>
+                        <div class="section8-slide">
+                            <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/awards_slider_1_e9ea6e1df4.png"
+                                alt="Hand holding a silver trophy at sunset">
+                        </div>
+                        <div class="section8-slide">
+                            <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/awards_slider_2_8415703e0e.png"
+                                alt="Great Place To Work Certified award on office wall">
+                        </div>
+                    </div>
+                </div>
+                <div class="section8-nav">
+                    <button type="button" class="section8-prev" aria-label="Previous slide">&#8249;</button>
+                    <button type="button" class="section8-next" aria-label="Next slide">&#8250;</button>
+                </div>
+            </div>
+        </div>
+        <script>
+            (function () {
+                var section = document.getElementById('section8');
+                var track = section.querySelector('.section8-track');
+                var slides = section.querySelectorAll('.section8-slide');
+                var prevBtn = section.querySelector('.section8-prev');
+                var nextBtn = section.querySelector('.section8-next');
+                var currentIndex = 0;
+
+                function getGap() {
+                    return window.innerWidth <= 768 ? 12 : 16;
+                }
+
+                function getSlidesToShow() {
+                    if (window.innerWidth <= 768) {
+                        return 1;
+                    }
+                    return 2.5;
+                }
+
+                function getMaxIndex() {
+                    return Math.max(0, Math.ceil(slides.length - getSlidesToShow()));
+                }
+
+                function updateSlider() {
+                    var maxIndex = getMaxIndex();
+                    var gap = getGap();
+
+                    if (currentIndex > maxIndex) {
+                        currentIndex = maxIndex;
+                    }
+                    if (currentIndex < 0) {
+                        currentIndex = 0;
+                    }
+
+                    var slideWidth = slides[0].getBoundingClientRect().width;
+                    track.style.transform = 'translateX(-' + (currentIndex * (slideWidth + gap)) + 'px)';
+
+                    prevBtn.disabled = currentIndex === 0;
+                    nextBtn.disabled = currentIndex >= maxIndex;
+                }
+
+                prevBtn.addEventListener('click', function () {
+                    if (currentIndex > 0) {
+                        currentIndex--;
+                        updateSlider();
+                    }
+                });
+
+                nextBtn.addEventListener('click', function () {
+                    if (currentIndex < getMaxIndex()) {
+                        currentIndex++;
+                        updateSlider();
+                    }
+                });
+
+                window.addEventListener('resize', updateSlider);
+                updateSlider();
+            })();
+        </script>
+    </section>
+    <!-- section 9 -->
+    <section id="section9">
+        <style>
+            #section9 {
+                position: relative;
+            }
+
+            #section9 picture,
+            #section9 img {
+                display: block;
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+        </style>
+        <picture>
+            <source
+                srcset="https://cmsuatlupin.blob.core.windows.net/public/uploads/section9_mbl_banner_99c8005865.png"
+                media="(max-width: 425px)" type="image/png">
+            <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/section9_banner_1489473841.png"
+                alt="Team collaborating at Lupin Research Park">
+        </picture>
     </section>
 </body>
 
