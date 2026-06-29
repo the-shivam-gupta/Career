@@ -85,25 +85,22 @@
             #section1 .site-header__utility li a {
                 color: inherit;
                 text-decoration: none;
-                transition: color 0.2s ease, font-size 0.2s ease, text-decoration 0.2s ease;
+                padding-bottom: 8px;
+                border-bottom: 2px solid transparent;
+                transition: color 0.2s ease, border-color 0.2s ease;
             }
 
             #section1 .site-header__nav li a:hover,
             #section1 .site-header__utility li a:hover {
                 color: #E7FF00;
                 font-weight: 500;
-                line-height: 50px;
-                text-decoration-line: underline;
-                text-decoration-style: solid;
+                border-bottom-color: #E7FF00;
             }
 
             #section1 .site-header__nav li a.is-active {
                 color: #E7FF00;
-                /* font-size: 9.992px; */
                 font-weight: 500;
-                line-height: 50px;
-                text-decoration-line: underline;
-                text-decoration-style: solid;
+                border-bottom-color: #E7FF00;
             }
 
             #section1 .site-header__utility {
@@ -164,13 +161,61 @@
                 height: 26px;
             }
 
-            @media (max-width: 1200px) {
-                #section1 .site-header__nav {
-                    display: none;
+            @media (min-width: 1024px) and (max-width: 1440px) {
+                #section1 .site-header {
+                    padding: 12px 20px;
+                    gap: 20px;
+                }
+
+                #section1 .site-header__logo img {
+                    height: 50px;
+                }
+
+                #section1 .site-header__nav ul,
+                #section1 .site-header__utility ul {
+                    gap: 20px;
+                }
+
+                #section1 .site-header__nav li,
+                #section1 .site-header__utility li {
+                    font-size: 14px;
+                    line-height: 30px;
+                    letter-spacing: 0.5px;
+                }
+
+                #section1 .site-header__utility {
+                    gap: 8px;
+                }
+
+                #section1 .site-header__separator {
+                    height: 18px;
+                }
+
+                #section1 .site-header__icons {
+                    gap: 8px;
+                }
+
+                #section1 .site-header__icons img {
+                    width: 18px;
+                    height: 18px;
+                }
+
+                #section1 .site-header__menu-btn {
+                    gap: 8px;
+                    padding: 6px 12px;
+                    font-size: 14px;
+                }
+
+                #section1 .site-header__menu-btn img {
+                    width: 18px;
+                    height: 18px;
                 }
             }
 
             @media (max-width: 768px) {
+                #section1 .site-header__nav {
+                    display: none;
+                }
                 #section1 .site-header {
                     padding: 16px 20px;
                 }
@@ -180,7 +225,30 @@
                 }
 
                 #section1 .site-header__logo img {
-                    height: 44px;
+                    height: 70px;
+                }
+                #section1 .site-header__menu-btn {
+                    padding: 10px 16px;
+                    gap: 8px;
+                    font-size: 16px;
+                }
+
+                #section1 .site-header__menu-btn img {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            @media (max-width: 425px) {
+                #section1 .site-header__menu-btn {
+                    padding: 6px 12px;
+                    gap: 8px;
+                    font-size: 16px;
+                }
+
+                #section1 .site-header__menu-btn img {
+                    width: 20px;
+                    height: 20px;
                 }
             }
 
@@ -192,7 +260,7 @@
                 font-style: normal;
                 font-weight: 700;
                 line-height: 73px;
-                width: 400px;
+                width: 30%;
                 top: 48%;
                 left: 0;
                 margin: 0;
@@ -210,9 +278,10 @@
             @media (min-width: 1024px) and (max-width: 1440px) {
                 #section1 h1 {
                     font-size: 38px;
-                    top: 40%;
-                    left: 40px;
-                    transform: translateY(-50%);
+                    top: 50%;
+                    line-height: 48px;
+                    width: 35%;
+                    margin: 0 0 0 40px;
                 }
             }
 
@@ -232,7 +301,7 @@
                     font-size: 32.131px;
                     line-height: 34.5px;
                     width: 70%;
-                    top: 85%;
+                    top: 78%;
                     left: 0;
                     margin: 0 0 0 20px;
                 }
@@ -357,12 +426,12 @@
                 border-radius: 27px;
                 background: linear-gradient(90deg, #09A341 0%, #38D973 100%);
                 color: #FFF;
-                font-family: D-DIN, sans-serif;
-                font-size: 14px;
+                font-family: Inter, sans-serif;
+                font-size: 22px;
                 font-style: normal;
                 font-weight: 700;
-                line-height: 28px;
-                padding: 6px 18px;
+                line-height: 26px;
+                padding: 12px 36px;
                 border: none;
                 cursor: pointer;
                 text-decoration: none;
@@ -382,6 +451,18 @@
                     max-width: none;
                     padding: 32px 20px 32px 40px;
                 }
+                #section2 h2{
+                    font-size: 28px;
+                    line-height: 36px;
+                }
+                #section2 p{
+                    font-size: 16px;
+                    line-height: 27px;
+                }
+                #section2 .section2-btn{
+                    font-size: 18px; 
+                    padding: 10px 36px;
+                }
             }
 
             @media (max-width: 768px) {
@@ -397,9 +478,13 @@
                 }
 
                 #section2 p {
-                    font-size: 12px;
+                    font-size: 14px;
                     line-height: 17px;
                     margin-bottom: 14px;
+                }
+                #section2 .section2-btn{
+                    font-size: 14px; 
+                    padding: 6px 28px;
                 }
             }
 
@@ -413,11 +498,6 @@
                 #section2 h2 {
                     font-size: 22px;
                     line-height: 28px;
-                }
-
-                #section2 .section2-btn {
-                    background: #FFF;
-                    color: #164772;
                 }
             }
         </style>
@@ -511,34 +591,34 @@
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
-                gap: 50px;
+                gap: 30px;
                 width: 100%;
                 margin: auto;
             }
 
             #section3 .section3-card {
                 width: 312px;
-                min-height: 350px;
+                min-height: 320px;
                 height: auto;
                 flex-shrink: 0;
                 border-radius: 26px;
                 border: 0.757px solid #D9D9D9;
-                padding: 18px 12px;
+                padding: 22px;
             }
 
             #section3 .section3-card-header {
                 display: flex;
                 align-items: flex-start;
                 gap: 10px;
-                margin-bottom: 16px;
+                margin-bottom: 24px;
                 min-height: 51px;
             }
 
             #section3 .section3-card-icon {
-                width: 16px;
-                height: 16px;
+                width: 20px;
+                height: 20px;
                 flex-shrink: 0;
-                margin-top: 0;
+                margin-top: 3px;
             }
 
             #section3 .section3-card h3 {
@@ -546,32 +626,50 @@
                 min-width: 0;
                 color: #FFF;
                 font-family: Inter, sans-serif;
-                font-size: 12px;
+                font-size: 18px;
                 font-style: normal;
                 font-weight: 700;
-                line-height: 17px;
+                line-height: 27px;
                 margin: 0;
             }
 
             #section3 .section3-card p {
                 color: #FFF;
                 font-family: Inter, sans-serif;
-                font-size: 12px;
+                font-size: 19px;
                 font-style: normal;
                 font-weight: 400;
-                line-height: 17px;
+                line-height: 29px;
                 margin: 0;
             }
 
-            @media (max-width: 1024px) {
+            @media (min-width: 1024px) and (max-width: 1440px) {
                 #section3 .section3-content {
                     padding: 40px 40px 44px;
                 }
 
                 #section3 .section3-card {
-                    width: 170px;
-                    min-height: 218.684px;
                     height: auto;
+                    padding: 18px;
+                    width: 300px;
+                }
+                #section3 .section3-intro h2{
+                    font-size: 28px;
+                    line-height: 36px;
+                }
+                #section3 .section3-cards{
+                    gap: 20px;
+                }
+                #section3 .section3-intro p{
+                    font-size: 16px;
+                    line-height: 27px;
+                }
+                #section3 .section3-card p{
+                    font-size: 16px;
+                    line-height: 27px;
+                }
+                #section3 .section3-card-header{
+                    min-height: 82px;
                 }
             }
 
@@ -584,9 +682,18 @@
                     font-size: 22px;
                     line-height: 30px;
                 }
+                #section3 .section3-intro p{
+                    font-size: 14px;
+                    line-height: 17px;
+                }
             }
 
             @media (max-width: 425px) {
+                #section3 .section3-card {
+                    width: 170px;
+                    min-height: 218.684px;
+                    height: auto;
+                }
                 #section3 .section3-intro {
                     margin-bottom: 24px;
                     text-align: left;
@@ -597,8 +704,6 @@
                     text-align: left;
                 }
                 #section3 .section3-intro p{
-                    font-size: 14px;
-                    line-height: 17px;
                     width: 85%;
                 }
 
@@ -616,6 +721,24 @@
                 #section3 .section3-card {
                     width: 100%;
                     max-width: none;
+                    padding: 12px;
+                }
+                #section3 .section3-card p{
+                    font-size: 12px;
+                    line-height: 17px;
+                }
+                #section3 .section3-card-icon{
+                    width: 16px;
+                    height: 16px;
+                }
+                #section3 .section3-card h3{
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+                #section3 .section3-card-header{
+                    margin-bottom: 14px;
+                    min-height: 72px;
+                    gap: 3px;
                 }
             }
         </style>
@@ -824,6 +947,24 @@
                 #section4 .section4-slide {
                     flex: 0 0 calc((100% - 16px) / 2);
                 }
+                #section4 .section4-nav{
+                    top: 120px;
+                }
+                #section4 .section4-nav button{
+                    width: 55px;
+                    height: 55px;
+                }
+                #section4 .section4-intro h2{
+                    font-size: 28px;
+                    line-height: 36px;
+                }
+                #section4 .section4-intro p{
+                    font-size: 16px;
+                    line-height: 27px;
+                }
+                #section4 .section4-header{
+                    margin-bottom: 90px;
+                }
             }
 
             @media (max-width: 768px) {
@@ -841,6 +982,7 @@
                 #section4 .section4-intro {
                     max-width: none;
                     text-align: left;
+                    margin-bottom: 40px;
                 }
 
                 #section4 .section4-nav {
@@ -858,11 +1000,24 @@
                 }
 
                 #section4 .section4-slide {
-                    flex: 0 0 82%;
+                    flex: 0 0 62%;
                 }
 
                 #section4 .section4-slide img {
                     border-radius: 22px;
+                }
+                #section4 .section4-intro h2{
+                    font-size: 22px;
+                    line-height: 28px;
+                }
+                #section4 .section4-nav button{
+                    width: 50px;
+                    height: 50px;
+                }
+                #section4 .section4-intro p{
+                    font-size: 14px;
+                    line-height: 17px;
+                    width: 90%;
                 }
             }
             @media (max-width: 425px) {
@@ -1008,7 +1163,7 @@
             #section5 .section5-banner img {
                 display: block;
                 width: 100%;
-                height: auto;
+                height: 100%;
                 object-fit: cover;
             }
 
@@ -1049,12 +1204,12 @@
                 border-radius: 27px;
                 background: #FFF;
                 color: #08A03F;
-                font-family: D-DIN, sans-serif;
-                font-size: 14px;
+                font-family: Inter, sans-serif;
+                font-size: 22px;
                 font-style: normal;
                 font-weight: 700;
-                line-height: 28px;
-                padding: 6px 28px;
+                line-height: 26px;
+                padding: 12px 38px;
                 border: none;
                 cursor: pointer;
                 text-decoration: none;
@@ -1063,15 +1218,26 @@
             @media (max-width: 1024px) {
                 #section5 .section5-content {
                     width: 50%;
-                    max-width: 420px;
-                    padding: 0 0 0 60px;
+                    padding: 0 0 0 40px;
+                }
+                #section5 .section5-content h2{
+                    font-size: 28px;
+                    line-height: 36px;
+                }
+                #section5 .section5-content p{
+                    font-size: 16px;
+                    line-height: 27px;
+                }
+                #section5 .section5-btn{
+                    font-size: 18px; 
+                    padding: 10px 36px;
                 }
             }
 
             @media (max-width: 768px) {
                 #section5 .section5-content {
                     width: 75%;
-                    padding: 32px 24px;
+                    padding: 32px 40px;
                 }
 
                 #section5 .section5-content h2 {
@@ -1080,8 +1246,12 @@
                 }
 
                 #section5 .section5-content p {
-                    font-size: 12px;
-                    line-height: 18px;
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+                #section5 .section5-btn{
+                    font-size: 14px; 
+                    padding: 6px 28px;
                 }
             }
 
@@ -1091,6 +1261,10 @@
                     padding: 0 0 0 20px;
                     align-self: start;
                     margin-top: 8%;
+                }
+                #section5 .section5-btn{
+                    font-size: 14px; 
+                    padding: 6px 28px;
                 }
             }
         </style>
@@ -1186,6 +1360,14 @@
                 #section6 .section6-content p {
                     max-width: 420px;
                 }
+                #section6 .section6-content p{
+                    font-size: 16px;
+                    line-height: 27px;
+                }
+                #section6 .section6-content h2{
+                    font-size: 28px;
+                    line-height: 36px;
+                }
             }
 
             @media (max-width: 768px) {
@@ -1196,6 +1378,10 @@
                 #section6 .section6-content h2,
                 #section6 .section6-content p {
                     max-width: 360px;
+                }
+                #section6 .section6-content p{
+                    font-size: 14px;
+                    line-height: 17px;
                 }
 
                 #section6 .section6-content h2 {
@@ -1284,7 +1470,7 @@
                 justify-self: stretch;
                 width: 100%;
                 box-sizing: border-box;
-                padding: 64px 56% 64px 70px;
+                padding: 64px 62% 64px 70px;
                 z-index: 2;
                 text-align: left;
             }
@@ -1327,6 +1513,14 @@
                 #section7 .section7-content p {
                     max-width: 420px;
                 }
+                #section7 .section7-content p{
+                    font-size: 16px;
+                    line-height: 27px;
+                }
+                #section7 .section7-content h2{
+                    font-size: 28px;
+                    line-height: 36px;
+                }
             }
 
             @media (max-width: 768px) {
@@ -1336,7 +1530,11 @@
 
                 #section7 .section7-content h2,
                 #section7 .section7-content p {
-                    max-width: 360px;
+                    max-width: 310px;
+                }
+                #section7 .section7-content p{
+                    font-size: 14px;
+                    line-height: 17px;
                 }
 
                 #section7 .section7-content h2 {
@@ -1461,12 +1659,12 @@
                 border-radius: 27px;
                 background: #FFF;
                 color: #000;
-                font-family: D-DIN, sans-serif;
-                font-size: 24px;
+                font-family: Inter, sans-serif;
+                font-size: 22px;
                 font-style: normal;
                 font-weight: 700;
-                line-height: 28px;
-                padding: 19px 45px;
+                line-height: 26px;
+                padding: 12px 44px;
                 border: none;
                 cursor: pointer;
                 text-decoration: none;
@@ -1538,7 +1736,7 @@
                 object-fit: cover;
             }
 
-            @media (max-width: 1024px) {
+            @media (min-width: 1024px) and (max-width: 1440px) {
                 #section8 .section8-layout {
                     padding: 40px 40px 44px;
                 }
@@ -1546,6 +1744,28 @@
                 #section8 .section8-slider {
                     width: calc(100% + 40px);
                     margin-right: -40px;
+                }
+                #section8 .section8-intro h2{
+                    font-size: 28px;
+                    line-height: 36px;
+                }
+                #section8 .section8-intro{
+                    width: 100%;
+                }
+                #section8 .section8-slide {
+                    flex: 0 0 72%;
+                }
+                #section8 .section8-intro p{
+                    font-size: 16px;
+                    line-height: 27px;
+                }
+                #section8 .section8-btn{
+                    font-size: 18px;
+                    padding: 10px 36px;
+                }
+                #section8 .section8-nav button{
+                    width: 55px;
+                    height: 55px;
                 }
             }
 
@@ -1558,7 +1778,7 @@
                     display: flex;
                     flex-direction: column;
                     align-items: stretch;
-                    padding: 32px 20px 40px;
+                    padding: 32px 40px 40px;
                     gap: 0;
                 }
 
@@ -1580,7 +1800,7 @@
                 }
 
                 #section8 .section8-slide {
-                    flex: 0 0 82%;
+                    flex: 0 0 62%;
                 }
 
                 #section8 .section8-slide img {
@@ -1592,6 +1812,18 @@
                     justify-content: center;
                     margin-top: 24px;
                     order: 3;
+                }
+                #section8 .section8-btn{
+                    font-size: 14px;
+                    padding: 6px 28px;
+                }
+                #section8 .section8-intro h2{
+                    font-size: 22px;
+                    line-height: 28px;
+                }
+                #section8 .section8-nav button{
+                    width: 50px;
+                    height: 50px;
                 }
             }
             @media (max-width: 425px) {
