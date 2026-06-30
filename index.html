@@ -37,11 +37,52 @@
                 left: 0;
                 right: 0;
                 z-index: 10;
+                padding: 0.833vw 3.125vw 1.979vw;
+            }
+
+            #section1 .site-header__actions {
+                display: flex;
+                align-items: flex-end;
+                gap: 1.979vw;
+                flex-shrink: 0;
+            }
+
+            #section1 .site-header__stack {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                gap: 0.417vw;
+            }
+
+            #section1 .site-header__top-links {
                 display: flex;
                 align-items: center;
+                gap: 2.083vw;
+            }
+
+            #section1 .site-header__top-links a {
+                color: #FFF;
+                font-family: Inter, sans-serif;
+                font-size: 0.833vw;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 1.25vw;
+                letter-spacing: 0.021vw;
+                text-decoration: none;
+                white-space: nowrap;
+                transition: color 0.2s ease;
+            }
+
+            #section1 .site-header__top-links a:hover {
+                color: #E7FF00;
+            }
+
+            #section1 .site-header__main {
+                display: flex;
+                align-items: flex-end;
                 justify-content: space-between;
                 gap: 1.979vw;
-                padding: 1.979vw 3.125vw;
+                width: 100%;
             }
 
             #section1 .site-header__logo {
@@ -136,8 +177,12 @@
                 height: 1.146vw;
             }
 
+            #section1 .site-header__utility-row {
+                display: flex;
+                align-items: center;
+            }
+
             #section1 .site-header__menu {
-                margin-left: auto;
                 flex-shrink: 0;
             }
 
@@ -165,7 +210,24 @@
 
             @media (min-width: 1024px) and (max-width: 1440px) {
                 #section1 .site-header {
-                    padding: 0.833vw 1.389vw;
+                    padding: 0.694vw 1.389vw 0.833vw;
+                    gap: 0.278vw;
+                }
+
+                #section1 .site-header__top-links {
+                    gap: 1.389vw;
+                }
+
+                #section1 .site-header__top-links a {
+                    font-size: 0.764vw;
+                    line-height: 1.111vw;
+                }
+
+                #section1 .site-header__main {
+                    gap: 1.389vw;
+                }
+
+                #section1 .site-header__actions {
                     gap: 1.389vw;
                 }
 
@@ -220,6 +282,11 @@
                 }
                 #section1 .site-header {
                     padding: 2.083vw 2.604vw;
+                    gap: 0;
+                }
+
+                #section1 .site-header__top-links {
+                    display: none;
                 }
 
                 #section1 .site-header__utility {
@@ -307,50 +374,191 @@
                     margin: 0 0 0 4.706vw;
                 }
             }
+
+            #section1 .fraud-modal {
+                position: fixed;
+                inset: 0;
+                z-index: 1000;
+                display: none;
+                align-items: center;
+                justify-content: center;
+                padding: 2.083vw;
+            }
+
+            #section1 .fraud-modal.is-open {
+                display: flex;
+            }
+
+            #section1 .fraud-modal__overlay {
+                position: absolute;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.55);
+                backdrop-filter: blur(2px);
+            }
+
+            #section1 .fraud-modal__dialog {
+                position: relative;
+                z-index: 1;
+                width: 100%;
+                max-width: 65vw;
+                max-height: 90vh;
+                overflow-y: auto;
+                background: #f8f8f8;
+                border: 0.052vw solid #d9d9d9;
+                box-shadow: 0 0.417vw 1.667vw rgba(0, 0, 0, 0.18);
+                padding: 2.604vw 2.604vw 2.083vw;
+            }
+
+            #section1 .fraud-modal__close {
+                position: absolute;
+                top: 1.042vw;
+                right: 1.042vw;
+                border: none;
+                background: transparent;
+                color: #000;
+                font-size: 1.667vw;
+                font-weight: 700;
+                line-height: 1;
+                cursor: pointer;
+                padding: 0.208vw 0.417vw;
+            }
+
+            #section1 .fraud-modal__title {
+                color: #4b2c85;
+                font-family: Inter, sans-serif;
+                font-size: 1.458vw;
+                font-weight: 700;
+                line-height: 1.4;
+                margin: 0 2.604vw 1.563vw 0;
+            }
+
+            #section1 .fraud-modal__body {
+                color: #333;
+                font-family: Inter, sans-serif;
+                font-size: 0.700vw;
+                font-weight: 400;
+                line-height: 1.65;
+            }
+
+            #section1 .fraud-modal__body p {
+                margin: 0 0 1.042vw;
+            }
+
+            #section1 .fraud-modal__body p:last-child {
+                margin-bottom: 0;
+            }
+
+            #section1 .fraud-modal__body a {
+                color: #4b2c85;
+                font-weight: 700;
+                text-decoration: none;
+            }
+
+            #section1 .fraud-modal__body a:hover {
+                text-decoration: underline;
+            }
+
+            #section1 .fraud-modal__contacts {
+                margin-top: 0.521vw;
+            }
+
+            #section1 .fraud-modal__contacts p {
+                margin: 0 0 0.417vw;
+            }
+
+            @media (max-width: 768px) {
+                #section1 .fraud-modal {
+                    padding: 4.167vw;
+                }
+
+                #section1 .fraud-modal__dialog {
+                    max-width: none;
+                    padding: 6.25vw 5.208vw 5.208vw;
+                }
+
+                #section1 .fraud-modal__close {
+                    top: 2.604vw;
+                    right: 2.604vw;
+                    font-size: 5.208vw;
+                }
+
+                #section1 .fraud-modal__title {
+                    font-size: 3.646vw;
+                    margin: 0 6.25vw 3.125vw 0;
+                }
+
+                #section1 .fraud-modal__body {
+                    font-size: 2.604vw;
+                }
+
+                #section1 .fraud-modal__body p {
+                    margin-bottom: 2.604vw;
+                }
+            }
+
+            @media (max-width: 425px) {
+                #section1 .fraud-modal__title {
+                    font-size: 4.706vw;
+                }
+
+                #section1 .fraud-modal__body {
+                    font-size: 3.294vw;
+                }
+            }
         </style>
         <div>
             <header class="site-header">
-                <a class="site-header__logo" href="#" aria-label="Lupin home">
-                    <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/Lupin_logo_1_9e84fd5125.svg"
-                        alt="Lupin">
-                </a>
-                <nav class="site-header__nav" aria-label="Main navigation">
-                    <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Our Business</a></li>
-                        <li><a href="#">Investors</a></li>
-                        <li><a href="#">Sustainability</a></li>
-                        <li><a href="#">Community</a></li>
-                        <li><a href="#">Media</a></li>
-                    </ul>
-                </nav>
-                <div class="site-header__utility">
-                    <ul>
-                        <li><a href="#" class="is-active">Careers</a></li>
-                    </ul>
-                    <span class="site-header__separator" aria-hidden="true"></span>
-                    <ul>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                    <span class="site-header__separator" aria-hidden="true"></span>
-                    <div class="site-header__icons">
-                        <a href="#" aria-label="Language">
-                            <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/globe_1_3a9080765f.svg"
-                                alt="">
-                        </a>
-                        <span class="site-header__separator" aria-hidden="true"></span>
-                        <a href="#" aria-label="Search">
-                            <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/Search_icon_1_ff3e9cce4f.svg"
-                                alt="">
-                        </a>
+                <div class="site-header__main">
+                    <a class="site-header__logo" href="#" aria-label="Lupin home">
+                        <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/Lupin_logo_1_9e84fd5125.svg"
+                            alt="Lupin">
+                    </a>
+                    <nav class="site-header__nav" aria-label="Main navigation">
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Our Business</a></li>
+                            <li><a href="#">Investors</a></li>
+                            <li><a href="#">Sustainability</a></li>
+                            <li><a href="#">Community</a></li>
+                            <li><a href="#">Media</a></li>
+                        </ul>
+                    </nav>
+                    <div class="site-header__actions">
+                        <div class="site-header__stack">
+                            <nav class="site-header__top-links" aria-label="Top links">
+                                <a href="#" data-fraud-modal-open>Recruitment Fraud Alert</a>
+                                <a href="#">Candidate Login</a>
+                            </nav>
+                            <div class="site-header__utility">
+                                <ul>
+                                    <li><a href="#" class="is-active">Careers</a></li>
+                                </ul>
+                                <span class="site-header__separator" aria-hidden="true"></span>
+                                <ul>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                                <span class="site-header__separator" aria-hidden="true"></span>
+                                <div class="site-header__icons">
+                                    <a href="#" aria-label="Language">
+                                        <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/globe_1_3a9080765f.svg"
+                                            alt="">
+                                    </a>
+                                    <span class="site-header__separator" aria-hidden="true"></span>
+                                    <a href="#" aria-label="Search">
+                                        <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/Search_icon_1_ff3e9cce4f.svg"
+                                            alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="site-header__menu">
+                            <button type="button" class="site-header__menu-btn" aria-label="Open menu">
+                                <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/hamburger_icon_5473136756.svg"
+                                    alt="">
+                                Menu
+                            </button>
+                        </div>
                     </div>
-                </div>
-                <div class="site-header__menu">
-                    <button type="button" class="site-header__menu-btn" aria-label="Open menu">
-                        <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/hamburger_icon_5473136756.svg"
-                            alt="">
-                        Menu
-                    </button>
                 </div>
             </header>
             <h1>Join Us in Shaping the Future of Healthcare</h1>
@@ -361,7 +569,93 @@
                 <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/section1_banner_d0078379c6.png"
                     alt="Banner">
             </picture>
+            <div class="fraud-modal" aria-hidden="true">
+                <div class="fraud-modal__overlay" data-fraud-modal-close></div>
+                <div class="fraud-modal__dialog" role="dialog" aria-modal="true"
+                    aria-labelledby="section1-fraud-modal-title">
+                    <button type="button" class="fraud-modal__close" data-fraud-modal-close
+                        aria-label="Close recruitment fraud notice">&times;</button>
+                    <h2 class="fraud-modal__title" id="section1-fraud-modal-title">Caution Notice – “Recruitment
+                        Fraud”</h2>
+                    <div class="fraud-modal__body">
+                        <p>It is hereby cautioned to the general public that in recent past, some individuals and
+                            recruitment agencies have tried to mislead the public by fictitiously claiming to be
+                            employees of Lupin Limited (and/or its group companies) or posing as authorized recruitment
+                            agencies of Lupin Limited (and/or its group companies).</p>
+                        <p>It has been brought to our notice that they send fake e-mails to the potential job seekers
+                            luring them with job offers and appointment letters using the details of Lupin Limited
+                            (and/or its group companies). These individuals / recruitment agencies are misguiding the
+                            job-seekers by promising them well-placed jobs with the company and asking them for a
+                            security deposit for providing return air-fare for the final round of interview. Further,
+                            they are corresponding through fake letterheads and bogus mail id’s of @lupin.com domain
+                            name.</p>
+                        <p>Kindly note that Lupin Limited (and/or its group companies) follows a formal recruitment
+                            process through its own HR department and does not outsource the final selection of
+                            prospective employees to any individuals or agencies. Further, Lupin Limited (and/or its
+                            group companies) does not ask for any security deposit or fees (refundable or non-refundable)
+                            at any stage of recruitment process.</p>
+                        <p>Please be advised that any potential job-seeker willingly corresponding with such individuals
+                            and recruitment agencies in any manner whether by e-mails or otherwise will be doing so at
+                            their own risks and consequences. Lupin Limited (and/or its group companies) strongly
+                            recommends that the potential job-seekers should not respond to such solicitations.</p>
+                        <p>Kindly note that Lupin Limited (and/or its group companies) will not accept any liability for
+                            any loss or damage that may be suffered or incurred directly or indirectly through
+                            correspondence with fraudulent individuals or recruitment agencies and that such
+                            communication should not be treated as an offer or representation from Lupin Limited
+                            (and/or its group companies).</p>
+                        <p>Should you come across any such fraudulent incident or have any information regarding
+                            solicitation for recruitment or employment with Lupin Limited (and/or its group companies),
+                            please assist us in taking appropriate action to curb such mala fide activities.</p>
+                        <div class="fraud-modal__contacts">
+                            <p>You may reach us:</p>
+                            <p>Mr. Raoul Dsouza – <a
+                                    href="mailto:raouldsouza@lupin.com">raouldsouza@lupin.com</a> | 022 66402113</p>
+                            <p>Ruchita Vartak – <a
+                                    href="mailto:ruchitavartak@lupin.com">ruchitavartak@lupin.com</a> | 022 66402118</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <script>
+            (function () {
+                var section = document.getElementById('section1');
+                var modal = section.querySelector('.fraud-modal');
+                var openBtn = section.querySelector('[data-fraud-modal-open]');
+                var closeTriggers = section.querySelectorAll('[data-fraud-modal-close]');
+
+                function openModal() {
+                    modal.classList.add('is-open');
+                    modal.setAttribute('aria-hidden', 'false');
+                    document.body.style.overflow = 'hidden';
+                }
+
+                function closeModal() {
+                    modal.classList.remove('is-open');
+                    modal.setAttribute('aria-hidden', 'true');
+                    document.body.style.overflow = '';
+                }
+
+                if (openBtn) {
+                    openBtn.addEventListener('click', function (event) {
+                        event.preventDefault();
+                        openModal();
+                    });
+                }
+
+                closeTriggers.forEach(function (trigger) {
+                    trigger.addEventListener('click', closeModal);
+                });
+
+                document.addEventListener('keydown', function (event) {
+                    if (event.key === 'Escape' && modal.classList.contains('is-open')) {
+                        closeModal();
+                    }
+                });
+
+                openModal();
+            })();
+        </script>
     </section>
     <!-- section 2 -->
     <section id="section2">
@@ -485,7 +779,8 @@
                 }
                 #section2 .section2-btn{
                     font-size: 1.823vw; 
-                    padding: 0.781vw 3.646vw;
+                    padding: 1.781vw 3.646vw;
+                    border-radius: 4.146vw;
                 }
             }
 
@@ -499,6 +794,16 @@
                 #section2 h2 {
                     font-size: 5.176vw;
                     line-height: 6.588vw;
+                }
+                #section2 p{
+                    font-size: 2.824vw;
+                    line-height: 4.235vw;
+                    margin-bottom: 2.824vw;
+                }
+                #section2 .section2-btn{
+                    font-size: 3.294vw;
+                    padding: 3.146vw 5vw;
+                    border-radius: 4.146vw;
                 }
             }
         </style>
@@ -687,6 +992,22 @@
                     font-size: 1.823vw;
                     line-height: 2.214vw;
                 }
+                #section3 .section3-card{
+                    width: 27.25vw;
+                    padding: 2.146vw;
+                }
+                #section3 .section3-card p{
+                    font-size: 1.623vw;
+                    line-height: 2.214vw;
+                }
+                #section3 .section3-card h3{
+                    font-size: 1.823vw;
+                    line-height: 2.214vw;
+                }
+                #section3 .section3-card-icon{
+                    width: 2.214vw;
+                    height: 2.214vw;
+                }
             }
 
             @media (max-width: 425px) {
@@ -698,18 +1019,26 @@
                 #section3 .section3-intro {
                     margin-bottom: 5.647vw;
                     text-align: left;
+                    max-width: 100%;
                 }
 
                 #section3 .section3-intro h2,
                 #section3 .section3-intro p {
                     text-align: left;
                 }
+                #section3 .section3-intro h2{
+                    font-size: 5.176vw;
+                    line-height: 6.588vw;
+                }
                 #section3 .section3-intro p{
                     width: 85%;
+                    font-size: 2.824vw;
+                    line-height: 4.235vw;
+                    margin-bottom: 2.824vw;
                 }
 
                 #section3 .section3-content {
-                    padding: 7.529vw 3.765vw 9.412vw;
+                    padding: 7.529vw 4.706vw 9.412vw;
                     align-self: start;
                 }
 
@@ -723,9 +1052,10 @@
                     width: 100%;
                     max-width: none;
                     padding: 2.824vw;
+                    border-radius: 4.146vw;
                 }
                 #section3 .section3-card p{
-                    font-size: 2.824vw;
+                    font-size: 2.624vw;
                     line-height: 4vw;
                 }
                 #section3 .section3-card-icon{
@@ -737,7 +1067,7 @@
                     line-height: 5.176vw;
                 }
                 #section3 .section3-card-header{
-                    margin-bottom: 3.294vw;
+                    margin-bottom: 0;
                     min-height: 16.941vw;
                     gap: 0.706vw;
                 }
@@ -746,7 +1076,7 @@
         <div class="section3-wrapper">
             <picture class="section3-banner">
                 <source
-                    srcset="https://cmsuatlupin.blob.core.windows.net/public/uploads/section3_mbl_banner_dc1a0ac0a7.png"
+                    srcset="https://cmsuatlupin.blob.core.windows.net/public/uploads/section_3_mbl_banner_b2e360997f.png"
                     media="(max-width: 425px)" type="image/png">
                 <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/section3_banner_9cde9a16cb.png"
                     alt="Lupin Careers">
@@ -776,7 +1106,7 @@
                             <img class="section3-card-icon"
                                 src="https://cmsuatlupin.blob.core.windows.net/public/uploads/petal_e45c6fdf5d.svg"
                                 alt="">
-                            <h3>Graduate Engineer Trainee<br>Program</h3>
+                            <h3>Graduate Engineer Trainee Program</h3>
                         </div>
                         <p>Build technical expertise and prepare for long-term growth through a structured development
                             journey designed to strengthen both knowledge and practical experience.</p>
@@ -786,7 +1116,7 @@
                             <img class="section3-card-icon"
                                 src="https://cmsuatlupin.blob.core.windows.net/public/uploads/petal_e45c6fdf5d.svg"
                                 alt="">
-                            <h3>Management Trainee<br>Program</h3>
+                            <h3>Management Trainee Program</h3>
                         </div>
                         <p>Gain cross-functional exposure and hands-on experience that helps build a strong foundation
                             for
@@ -808,7 +1138,7 @@
                             <img class="section3-card-icon"
                                 src="https://cmsuatlupin.blob.core.windows.net/public/uploads/petal_e45c6fdf5d.svg"
                                 alt="">
-                            <h3>Research Internship<br>Program</h3>
+                            <h3>Research Internship Program</h3>
                         </div>
                         <p>Experience immersive research through the Lupin Program for Research Interns (LPRI), learning
                             under expert mentorship at Lupin Research Park and building pathways to scientific careers.
@@ -954,8 +1284,9 @@
                     top: 11.719vw;
                 }
                 #section4 .section4-nav button{
-                    width: 5.371vw;
-                    height: 5.371vw;
+                    width: 3.819vw;
+                    height: 3.819vw;
+                    font-size: 2.389vw;
                 }
                 #section4 .section4-intro h2{
                     font-size: 2.734vw;
@@ -972,7 +1303,7 @@
 
             @media (max-width: 768px) {
                 #section4 {
-                    padding: 4.167vw 2.604vw 5.208vw;
+                    padding: 4.688vw 3.125vw 5.208vw;
                     overflow: hidden;
                 }
 
@@ -993,6 +1324,7 @@
                     transform: none;
                     justify-content: center;
                     margin-top: 3.125vw;
+                    gap: 3.563vw;
                 }
 
                 #section4 .section4-slider {
@@ -1014,8 +1346,9 @@
                     line-height: 3.646vw;
                 }
                 #section4 .section4-nav button{
-                    width: 6.51vw;
-                    height: 6.51vw;
+                    width: 5.51vw;
+                    height: 5.51vw;
+                    font-size: 3.51vw;
                 }
                 #section4 .section4-intro p{
                     font-size: 1.823vw;
@@ -1024,6 +1357,9 @@
                 }
             }
             @media (max-width: 425px) {
+                #section4{
+                    padding: 7.529vw 4.706vw 9.412vw;
+                }
                 #section4 .section4-intro h2 {
                     font-size: 5.176vw;
                     line-height: 7.059vw;
@@ -1032,9 +1368,17 @@
                     font-size: 2.824vw;
                     line-height: 4vw;
                 }
+                #section4 .section4-nav{
+                    margin-top: 7.125vw;
+                }
                 #section4 .section4-nav button{
-                    width: 10.588vw;
-                    height: 10.588vw;
+                    width: 8.588vw;
+                    height: 8.588vw;
+                    font-size: 5vw;
+                }
+                #section4 .section4-slider{
+                    margin-left: -5vw;
+                    margin-right: -5vw;
                 }
             }
         </style>
@@ -1254,20 +1598,32 @@
                 }
                 #section5 .section5-btn{
                     font-size: 1.823vw; 
-                    padding: 0.781vw 3.646vw;
+                    padding: 1.781vw 3.646vw;
+                    border-radius: 4.146vw;
                 }
             }
 
             @media (max-width: 425px) {
                 #section5 .section5-content {
                     width: 80%;
-                    padding: 0 0 0 4.706vw;
+                    padding: 7.529vw 0 0 4.706vw;
                     align-self: start;
-                    margin-top: 8%;
                 }
                 #section5 .section5-btn{
-                    font-size: 3.294vw; 
-                    padding: 1.412vw 6.588vw;
+                    font-size: 3.294vw;
+                    padding: 3.146vw 5vw;
+                    border-radius: 4.146vw;
+                    margin-top: 5vw;
+                }
+                #section5 .section5-content h2{
+                    font-size: 5.176vw;
+                    line-height: 6.588vw;
+                    margin-bottom: 10vw;
+                }
+                #section5 .section5-content p{
+                    font-size: 2.824vw;
+                    line-height: 4.235vw;
+                    margin-bottom: 2.824vw;
                 }
             }
         </style>
@@ -1397,7 +1753,7 @@
                 #section6 .section6-content {
                     width: 90%;
                     max-width: none;
-                    padding: 8.471vw 4.706vw 0;
+                    padding: 7.529vw 4.706vw 0;
                     align-self: start;
                     justify-self: stretch;
                 }
@@ -1550,7 +1906,7 @@
                 #section7 .section7-content {
                     width: 90%;
                     max-width: none;
-                    padding: 8.471vw 4.706vw 0;
+                    padding: 7.529vw 4.706vw 0;
                     align-self: start;
                     justify-self: stretch;
                 }
@@ -1781,7 +2137,7 @@
                 #section8 .section8-nav button {
                     width: 3.819vw;
                     height: 3.819vw;
-                    font-size: 1.389vw;
+                    font-size: 2.389vw;
                 }
             }
 
@@ -1800,14 +2156,16 @@
 
                 #section8 .section8-intro {
                     width: 70%;
-                    margin-bottom: 9.115vw;
+                    margin-bottom: 5.208vw;
                     margin-right: auto;
+                    order: 1;
                 }
 
                 #section8 .section8-slider {
                     overflow: visible;
-                    width: 100%;
-                    margin-right: 0;
+                    width: calc(100% + 5.208vw);
+                    margin-left: -2.604vw;
+                    margin-right: -2.604vw;
                     order: 2;
                 }
 
@@ -1816,7 +2174,7 @@
                 }
 
                 #section8 .section8-slide {
-                    flex: 0 0 62%;
+                    flex: 0 0 85%;
                 }
 
                 #section8 .section8-slide img {
@@ -1827,19 +2185,22 @@
                     position: static;
                     justify-content: center;
                     margin-top: 3.125vw;
+                    gap: 3.563vw;
                     order: 3;
                 }
                 #section8 .section8-btn{
                     font-size: 1.823vw;
-                    padding: 0.781vw 3.646vw;
+                    padding: 1.781vw 3.646vw;
+                    border-radius: 4.146vw;
                 }
                 #section8 .section8-intro h2{
                     font-size: 2.865vw;
                     line-height: 3.646vw;
                 }
                 #section8 .section8-nav button{
-                    width: 6.51vw;
-                    height: 6.51vw;
+                    width: 5.51vw;
+                    height: 5.51vw;
+                    font-size: 3.51vw;
                 }
                 #section8 .section8-intro p{
                     font-size: 1.823vw;
@@ -1847,31 +2208,49 @@
                 }
             }
             @media (max-width: 425px) {
+                #section8 .section8-layout {
+                    padding: 7.529vw 4.706vw 0;
+                }
+
                 #section8 .section8-intro{
                     width: 90%;
+                    margin-bottom: 16vw;
                 }
                 #section8 .section8-intro h2{
                     font-size: 5.176vw;
                     line-height: 7.059vw;
+                    margin-bottom: 10vw;
                 }
                 #section8 .section8-intro p{
                     font-size: 2.824vw;
                     line-height: 4vw;
+                    max-width: 90%;
                 }
                 #section8 .section8-btn{
                     font-size: 3.294vw;
-                    padding: 1.412vw 6.588vw;
+                    padding: 3.146vw 5vw;
+                    border-radius: 4.146vw;
+                    margin-top: 5vw;
+                }
+                #section8 .section8-slider {
+                    width: 100%;
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+                #section8 .section8-nav{
+                    margin-top: 7.125vw;
                 }
                 #section8 .section8-nav button{
-                    width: 10.588vw;
-                    height: 10.588vw;
+                    width: 8.588vw;
+                    height: 8.588vw;
+                    font-size: 5vw;
                 }
             }
         </style>
         <div class="section8-wrapper">
             <picture class="section8-banner">
                 <source
-                    srcset="https://cmsuatlupin.blob.core.windows.net/public/uploads/section8_mbl_banner_2d793a2dd8.png"
+                    srcset="https://cmsuatlupin.blob.core.windows.net/public/uploads/section_8_mbl_banner_a6142c7afa.png"
                     media="(max-width: 425px)" type="image/png">
                 <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/section8_banner_8ab3cd628e.png"
                     alt="Awards and recognition background">
@@ -1920,7 +2299,7 @@
                 var currentIndex = 0;
 
                 function getGap() {
-                    if (window.innerWidth <= 768) return window.innerWidth * 0.625 / 100;
+                    if (window.innerWidth <= 768) return window.innerWidth * 1.563 / 100;
                     return window.innerWidth * 1.354 / 100;
                 }
 
@@ -2084,13 +2463,13 @@
 
             #section9 .section9-social {
                 display: flex;
-                align-items: center;
+                align-items: flex-end;
                 gap: 2.083vw;
             }
 
             #section9 .section9-social a {
                 display: flex;
-                align-items: center;
+                align-items: flex-end;
                 justify-content: center;
                 transition: opacity 0.2s ease;
             }
@@ -2102,7 +2481,10 @@
             #section9 .section9-social img {
                 display: block;
                 width: 1.771vw;
-                height: 1.771vw;
+                height: auto;
+                max-height: 1.771vw;
+                object-fit: contain;
+                object-position: bottom;
             }
 
             @media (max-width: 1024px) {
@@ -2133,7 +2515,7 @@
 
                 #section9 .section9-social img {
                     width: 2.734vw;
-                    height: 2.734vw;
+                    max-height: 2.734vw;
                 }
 
                 #section9 .section9-card-petal {
@@ -2164,8 +2546,12 @@
                 #section9 .section9-card-text p {
                     white-space: normal;
                 }
+                #section9 .section9-card-text h2{
+                    font-size: 5.176vw;
+                    line-height: 6.588vw;
+                }
                 #section9 .section9-card-text p{
-                    font-size: 1.563vw;
+                    font-size: 1.763vw;
                     line-height: 2.637vw;
                 }
 
@@ -2186,8 +2572,8 @@
                     opacity: 0.6;
                 }
                 #section9 .section9-social img{
-                    width: 3.125vw;
-                    height: 3.125vw;
+                    width: 5.125vw;
+                    max-height: 5.125vw;
                 }
             }
 
@@ -2202,15 +2588,17 @@
 
                 #section9 .section9-card {
                     padding: 3.765vw 4.706vw;
+                    border-radius: 2.146vw;
                 }
 
                 #section9 .section9-card-text h2 {
                     font-size: 5.176vw;
-                    margin: 0;
+                    margin-bottom: 3vw;
                 }
 
                 #section9 .section9-card-text p {
                     font-size: 3.059vw;
+                    line-height: 4.235vw;
                 }
 
                 #section9 .section9-social {
@@ -2218,8 +2606,8 @@
                 }
 
                 #section9 .section9-social img {
-                    width: 5.176vw;
-                    height: 5.176vw;
+                    width: 6.176vw;
+                    max-height: 6.176vw;
                 }
             }
         </style>
