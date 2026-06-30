@@ -923,12 +923,14 @@
 
             #section4 .section4-slide {
                 flex: 0 0 calc((100% - 52px) / 3);
+                border-radius: 22px;
+                overflow: hidden;
             }
 
             #section4 .section4-slide img {
                 display: block;
                 width: 100%;
-                height: auto;
+                aspect-ratio: 16 / 10;
                 border-radius: 22px;
                 object-fit: cover;
             }
@@ -1047,27 +1049,27 @@
             <div class="section4-slider">
                 <div class="section4-track">
                     <div class="section4-slide">
-                        <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/slider_1_a7660c7d32.png"
+                        <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/slider_v2_1_bf39437404.png"
                             alt="Colleagues collaborating in an office">
                     </div>
                     <div class="section4-slide">
-                        <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/slider_2_6c9eeabe61.png"
+                        <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/slider_v2_2_f63ec8cd47.png"
                             alt="Team in laboratory facility">
                     </div>
                     <div class="section4-slide">
-                        <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/slider_3_01f4a1ae78.png"
+                        <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/slider_v2_3_594b1f764c.png"
                             alt="Lupin team group photo">
                     </div>
                     <div class="section4-slide">
-                        <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/slider_1_a7660c7d32.png"
+                        <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/slider_v2_1_bf39437404.png"
                             alt="Colleagues collaborating in an office">
                     </div>
                     <div class="section4-slide">
-                        <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/slider_2_6c9eeabe61.png"
+                        <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/slider_v2_2_f63ec8cd47.png"
                             alt="Team in laboratory facility">
                     </div>
                     <div class="section4-slide">
-                        <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/slider_3_01f4a1ae78.png"
+                        <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/slider_v2_3_594b1f764c.png"
                             alt="Lupin team group photo">
                     </div>
                 </div>
@@ -1679,8 +1681,8 @@
             }
 
             #section8 .section8-nav button {
-                width: 67px;
-                height: 67px;
+                width: 60px;
+                height: 60px;
                 border-radius: 50%;
                 border: none;
                 cursor: pointer;
@@ -1867,19 +1869,19 @@
                 <div class="section8-slider">
                     <div class="section8-track">
                         <div class="section8-slide">
-                            <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/awards_slider_1_e9ea6e1df4.png"
+                            <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/awards_1_e1842a86e3.png"
                                 alt="Hand holding a silver trophy at sunset">
                         </div>
                         <div class="section8-slide">
-                            <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/awards_slider_2_8415703e0e.png"
+                            <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/awards_2_876e60df32.png"
                                 alt="Great Place To Work Certified award on office wall">
                         </div>
                         <div class="section8-slide">
-                            <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/awards_slider_1_e9ea6e1df4.png"
+                            <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/awards_1_e1842a86e3.png"
                                 alt="Hand holding a silver trophy at sunset">
                         </div>
                         <div class="section8-slide">
-                            <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/awards_slider_2_8415703e0e.png"
+                            <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/awards_2_876e60df32.png"
                                 alt="Great Place To Work Certified award on office wall">
                         </div>
                     </div>
@@ -1959,21 +1961,289 @@
                 position: relative;
             }
 
-            #section9 picture,
-            #section9 img {
+            #section9 .section9-wrapper {
+                position: relative;
+                display: grid;
+            }
+
+            #section9 .section9-banner,
+            #section9 .section9-content {
+                grid-area: 1 / 1;
+            }
+
+            #section9 .section9-banner img {
                 display: block;
                 width: 100%;
-                height: auto;
+                height: 100%;
+                min-height: 100%;
                 object-fit: cover;
             }
+
+            #section9 .section9-content {
+                z-index: 2;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 80px 70px;
+                box-sizing: border-box;
+            }
+
+            #section9 .section9-cards {
+                display: flex;
+                align-items: stretch;
+                gap: 30px;
+                max-width: 1110px;
+                width: 100%;
+            }
+
+            #section9 .section9-card {
+                background: #0431388a;
+                border-radius: 22px;
+                flex: 1 1 0;
+                min-width: 0;
+                padding: 36px 48px;
+                box-sizing: border-box;
+            }
+
+            #section9 .section9-card-text {
+                position: relative;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            #section9 .section9-card-copy {
+                position: relative;
+                z-index: 1;
+            }
+
+            #section9 .section9-card-petal {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                height: auto;
+                width: auto;
+                pointer-events: none;
+                user-select: none;
+            }
+
+            #section9 .section9-card-text h2 {
+                color: #FFF;
+                font-family: Inter, sans-serif;
+                font-size: 48px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 58px;
+                margin: 0 0 6px;
+                white-space: nowrap;
+            }
+
+            #section9 .section9-card-text p {
+                color: #FFF;
+                font-family: Inter, sans-serif;
+                font-size: 19px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 29px;
+                margin: 0;
+                white-space: nowrap;
+            }
+
+            #section9 .section9-card-social {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            #section9 .section9-divider {
+                width: 2px;
+                align-self: stretch;
+                background: rgba(255, 255, 255, 0.55);
+                flex-shrink: 0;
+            }
+
+            #section9 .section9-social {
+                display: flex;
+                align-items: center;
+                gap: 40px;
+            }
+
+            #section9 .section9-social a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: opacity 0.2s ease;
+            }
+
+            #section9 .section9-social a:hover {
+                opacity: 0.75;
+            }
+
+            #section9 .section9-social img {
+                display: block;
+                width: 34px;
+                height: 34px;
+            }
+
+            @media (max-width: 1024px) {
+                #section9 .section9-content {
+                    padding: 60px 40px;
+                }
+
+                #section9 .section9-cards {
+                    max-width: 920px;
+                    gap: 16px;
+                }
+
+                #section9 .section9-card {
+                    padding: 18px 24px;
+                }
+
+                #section9 .section9-card-text h2 {
+                    font-size: 26px;
+                }
+
+                #section9 .section9-card-text p {
+                    font-size: 14px;
+                }
+
+                #section9 .section9-social {
+                    gap: 30px;
+                }
+
+                #section9 .section9-social img {
+                    width: 28px;
+                    height: 28px;
+                }
+
+                #section9 .section9-card-petal {
+                    height: 75%;
+                }
+            }
+
+            @media (max-width: 768px) {
+                #section9 .section9-content {
+                    padding: 48px 20px;
+                }
+
+                #section9 .section9-cards {
+                    flex-direction: column;
+                    gap: 16px;
+                    --section9-card-height: 160px;
+                }
+
+                #section9 .section9-card {
+                    flex: none;
+                    width: 100%;
+                    height: var(--section9-card-height);
+                    padding: 20px 30px;
+                    text-align: center;
+                }
+
+                #section9 .section9-card-text h2,
+                #section9 .section9-card-text p {
+                    white-space: normal;
+                }
+
+                #section9 .section9-card-social {
+                    justify-content: center;
+                }
+
+                #section9 .section9-divider {
+                    display: none;
+                }
+
+                #section9 .section9-social {
+                    gap: 24px;
+                }
+
+                #section9 .section9-card-petal {
+                    height: 60%;
+                    opacity: 0.6;
+                }
+            }
+
+            @media (max-width: 425px) {
+                #section9 .section9-content {
+                    padding: 32px 16px;
+                }
+
+                #section9 .section9-cards {
+                    --section9-card-height: 130px;
+                }
+
+                #section9 .section9-card {
+                    padding: 16px 20px;
+                }
+
+                #section9 .section9-card-text h2 {
+                    font-size: 22px;
+                    margin: 0;;
+                }
+
+                #section9 .section9-card-text p {
+                    font-size: 13px;
+                }
+
+                #section9 .section9-social {
+                    gap: 20px;
+                }
+
+                #section9 .section9-social img {
+                    width: 22px;
+                    height: 22px;
+                }
+            }
         </style>
-        <picture>
-            <source
-                srcset="https://cmsuatlupin.blob.core.windows.net/public/uploads/section9_mbl_banner_99c8005865.png"
-                media="(max-width: 425px)" type="image/png">
-            <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/section9_banner_1489473841.png"
-                alt="Team collaborating at Lupin Research Park">
-        </picture>
+        <div class="section9-wrapper">
+            <picture class="section9-banner">
+                <source
+                    srcset="https://cmsuatlupin.blob.core.windows.net/public/uploads/section9_mbl_banner_99c8005865.png"
+                    media="(max-width: 425px)" type="image/png">
+                <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/section9_banner_1489473841.png"
+                    alt="Team collaborating at Lupin Research Park">
+            </picture>
+            <div class="section9-content">
+                <div class="section9-cards">
+                    <div class="section9-card section9-card-text">
+                        <img class="section9-card-petal"
+                            src="https://cmsuatlupin.blob.core.windows.net/public/uploads/side_petal_960ea2ee68.svg"
+                            alt="" aria-hidden="true">
+                        <div class="section9-card-copy">
+                            <h2>Connect With Us</h2>
+                            <p>Follow our social channels to get a<br/> glimpse of life at Lupin</p>
+                        </div>
+                    </div>
+                    <div class="section9-divider" aria-hidden="true"></div>
+                    <div class="section9-card section9-card-social">
+                        <div class="section9-social">
+                            <a href="#" aria-label="Follow Lupin on X">
+                                <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/X_199642a319.svg"
+                                    alt="">
+                            </a>
+                            <a href="#" aria-label="Follow Lupin on Facebook">
+                                <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/facebook_95f7283991.svg"
+                                    alt="">
+                            </a>
+                            <a href="#" aria-label="Follow Lupin on Instagram">
+                                <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/instagram_d774115618.svg"
+                                    alt="">
+                            </a>
+                            <a href="#" aria-label="Follow Lupin on LinkedIn">
+                                <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/linked_In_833e50d0a0.svg"
+                                    alt="">
+                            </a>
+                            <a href="#" aria-label="Follow Lupin on YouTube">
+                                <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/yt_7efa8f2035.svg"
+                                    alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 </body>
 
