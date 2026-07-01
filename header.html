@@ -67,7 +67,7 @@
             #section1 .site-header__stack {
                 display: flex;
                 flex-direction: column;
-                align-items: flex-end;
+                align-items: flex-start;
                 gap: 0.417vw;
             }
 
@@ -612,7 +612,7 @@
                         <div class="site-header__stack">
                             <nav class="site-header__top-links" aria-label="Top links">
                                 <a href="#" data-fraud-modal-open>Recruitment Fraud Alert</a>
-                                <a href="#">Candidate Login</a>
+                                <a target="_blank" href="https://career8.successfactors.com/careers?company=C0001119306P">Candidate Login</a>
                             </nav>
                             <div class="site-header__utility">
                                 <ul>
@@ -620,7 +620,7 @@
                                 </ul>
                                 <span class="site-header__separator" aria-hidden="true"></span>
                                 <ul>
-                                    <li><a href="#">Contact</a></li>
+                                    <li><a target="_blank" href="https://www.lupin.com/contact-us">Contact</a></li>
                                 </ul>
                                 <span class="site-header__separator" aria-hidden="true"></span>
                                 <div class="site-header__icons">
@@ -758,11 +758,15 @@
                     </div>
                     <div class="site-header__drawer-body">
                         <nav class="site-header__drawer-nav" aria-label="Main navigation">
-                            <ul></ul>
+                            <ul>
+                                <li><a target="_blank" href="https://www.lupin.com/about-us">About Us</a></li>
+                                <li><a target="_blank" href="https://www.lupin.com/our-business">Our Business</a></li>
+                                <li><a target="_blank" href="https://www.lupin.com/investors">Investors</a></li>
+                                <li><a target="_blank" href="https://www.lupin.com/media">Media</a></li>
+                                <li><a target="_blank" href="https://www.lupin.com/community">Community</a></li>
+                                <li><a target="_blank" href="https://www.lupin.com/sustainability">Sustainability</a></li>
+                            </ul>
                         </nav>
-                        <div class="site-header__drawer-section site-header__drawer-links">
-                            <ul></ul>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -789,20 +793,9 @@
         function syncDrawerLinks() {
             var desktopNav = section.querySelector('.site-header__nav ul');
             var drawerNav = section.querySelector('.site-header__drawer-nav ul');
-            var desktopTopLinks = section.querySelector('.site-header__top-links');
-            var drawerTopLinks = section.querySelector('.site-header__drawer-links ul');
 
             if (desktopNav && drawerNav) {
                 drawerNav.innerHTML = desktopNav.innerHTML;
-            }
-
-            if (desktopTopLinks && drawerTopLinks) {
-                drawerTopLinks.innerHTML = '';
-                desktopTopLinks.querySelectorAll('a').forEach(function (link) {
-                    var item = document.createElement('li');
-                    item.appendChild(link.cloneNode(true));
-                    drawerTopLinks.appendChild(item);
-                });
             }
         }
 
