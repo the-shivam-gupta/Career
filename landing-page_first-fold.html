@@ -1,0 +1,421 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers Page - Section 1</title>
+</head>
+
+<body>
+    <section id="section1">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                max-width: 100%;
+                overflow-x: clip;
+            }
+
+            html {
+                overflow-x: clip;
+            }
+
+            #section1 {
+                position: relative;
+                z-index: 10;
+                overflow-x: clip;
+                max-width: 100%;
+            }
+
+            #section1>div {
+                position: relative;
+                max-width: 100%;
+                overflow: visible;
+            }
+
+
+            #section1 h1 {
+                position: absolute;
+                color: #FFF;
+                font-family: Inter, sans-serif;
+                font-size: 3.177vw;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 3.802vw;
+                width: 32vw;
+                top: 48%;
+                left: 0;
+                margin: 0 0 0 3.646vw;
+                z-index: 1;
+            }
+
+            #section1 picture img {
+                display: block;
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+
+            @media (min-width: 1024px) and (max-width: 1440px) {
+                #section1 h1 {
+                    font-size: 2.917vw;
+                    top: 50%;
+                    line-height: 3.472vw;
+                    width: 42vw;
+                    margin: 0 0 0 2.778vw;
+                }
+            }
+
+            @media (max-width: 768px) {
+                #section1 h1 {
+                    font-size: 3.906vw;
+                    line-height: 4.688vw;
+                    width: 36.458vw;
+                    top: 50%;
+                    left: 0;
+                    margin: 0 0 0 5.208vw;
+                }
+            }
+
+            @media (max-width: 425px) {
+                #section1 h1 {
+                    font-size: 7.56vw;
+                    line-height: 8.118vw;
+                    width: 70%;
+                    top: 78%;
+                    left: 0;
+                    margin: 0 0 0 4.706vw;
+                }
+            }
+
+            #section1 .fraud-modal {
+                position: fixed;
+                inset: 0;
+                z-index: 1000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 2.083vw;
+                visibility: hidden;
+                pointer-events: none;
+            }
+
+            #section1 .fraud-modal.is-open,
+            #section1 .fraud-modal.is-closing {
+                visibility: visible;
+            }
+
+            #section1 .fraud-modal.is-open {
+                pointer-events: auto;
+            }
+
+            #section1 .fraud-modal.is-closing {
+                pointer-events: none;
+            }
+
+            #section1 .fraud-modal__overlay {
+                position: absolute;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.55);
+                backdrop-filter: blur(2px);
+                opacity: 0;
+                transition: opacity 0.35s ease;
+            }
+
+            #section1 .fraud-modal.is-open .fraud-modal__overlay {
+                opacity: 1;
+            }
+
+            #section1 .fraud-modal__dialog {
+                position: relative;
+                z-index: 1;
+                width: 100%;
+                max-width: 65vw;
+                max-height: 90vh;
+                overflow-y: auto;
+                background: #f8f8f8;
+                border: 0.052vw solid #d9d9d9;
+                box-shadow: 0 0.417vw 1.667vw rgba(0, 0, 0, 0.18);
+                padding: 2.604vw 2.604vw 2.083vw;
+                opacity: 0;
+                transform: scale(0.96) translateY(1.042vw);
+                transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                    transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+                will-change: opacity, transform;
+            }
+
+            #section1 .fraud-modal__dialog.is-dialog-open {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+
+            #section1 .fraud-modal__close {
+                position: absolute;
+                top: 1.042vw;
+                right: 1.042vw;
+                border: none;
+                background: transparent;
+                color: #000;
+                font-size: 1.667vw;
+                font-weight: 700;
+                line-height: 1;
+                cursor: pointer;
+                padding: 0.208vw 0.417vw;
+            }
+
+            #section1 .fraud-modal__title {
+                color: #4b2c85;
+                font-family: Inter, sans-serif;
+                font-size: 1.458vw;
+                font-weight: 700;
+                line-height: 1.4;
+                margin: 0 2.604vw 1.563vw 0;
+            }
+
+            #section1 .fraud-modal__body {
+                color: #333;
+                font-family: Inter, sans-serif;
+                font-size: 0.700vw;
+                font-weight: 400;
+                line-height: 1.65;
+            }
+
+            #section1 .fraud-modal__body p {
+                margin: 0 0 1.042vw;
+            }
+
+            #section1 .fraud-modal__body p:last-child {
+                margin-bottom: 0;
+            }
+
+            #section1 .fraud-modal__body a {
+                color: #4b2c85;
+                font-weight: 700;
+                text-decoration: none;
+            }
+
+            #section1 .fraud-modal__body a:hover {
+                text-decoration: underline;
+            }
+
+            #section1 .fraud-modal__contacts {
+                margin-top: 0.521vw;
+            }
+
+            #section1 .fraud-modal__contacts p {
+                margin: 0 0 0.417vw;
+            }
+
+            @media (max-width: 768px) {
+                #section1 .fraud-modal {
+                    padding: 4.167vw;
+                }
+
+                #section1 .fraud-modal__dialog {
+                    max-width: none;
+                    padding: 6.25vw 5.208vw 5.208vw;
+                }
+
+                #section1 .fraud-modal__close {
+                    top: 2.604vw;
+                    right: 2.604vw;
+                    font-size: 5.208vw;
+                }
+
+                #section1 .fraud-modal__title {
+                    font-size: 3.646vw;
+                    margin: 0 6.25vw 3.125vw 0;
+                }
+
+                #section1 .fraud-modal__body {
+                    font-size: 2.604vw;
+                }
+
+                #section1 .fraud-modal__body p {
+                    margin-bottom: 2.604vw;
+                }
+            }
+
+            @media (max-width: 425px) {
+                #section1 .fraud-modal__title {
+                    font-size: 4.706vw;
+                }
+
+                #section1 .fraud-modal__body {
+                    font-size: 3.294vw;
+                }
+            }
+        </style>
+        <div>
+            <h1>Join Us in Shaping the Future of Healthcare</h1>
+            <picture>
+                <source
+                    srcset="https://www.lupin.com/uploads/section1_mbl_banner_40c7539894.png"
+                    media="(max-width: 425px)" type="image/png">
+                <img src="https://www.lupin.com/uploads/section1_banner_d0078379c6.png"
+                    alt="Banner">
+            </picture>
+            <div class="fraud-modal" aria-hidden="true">
+                <div class="fraud-modal__overlay" data-fraud-modal-close></div>
+                <div class="fraud-modal__dialog" role="dialog" aria-modal="true"
+                    aria-labelledby="section1-fraud-modal-title">
+                    <button type="button" class="fraud-modal__close" data-fraud-modal-close
+                        aria-label="Close recruitment fraud notice">&times;</button>
+                    <h2 class="fraud-modal__title" id="section1-fraud-modal-title">Caution Notice – “Recruitment
+                        Fraud”</h2>
+                    <div class="fraud-modal__body">
+                        <p>It is hereby cautioned to the general public that in recent past, some individuals and
+                            recruitment agencies have tried to mislead the public by fictitiously claiming to be
+                            employees of Lupin Limited (and/or its group companies) or posing as authorized recruitment
+                            agencies of Lupin Limited (and/or its group companies).</p>
+                        <p>It has been brought to our notice that they send fake e-mails to the potential job seekers
+                            luring them with job offers and appointment letters using the details of Lupin Limited
+                            (and/or its group companies). These individuals / recruitment agencies are misguiding the
+                            job-seekers by promising them well-placed jobs with the company and asking them for a
+                            security deposit for providing return air-fare for the final round of interview. Further,
+                            they are corresponding through fake letterheads and bogus mail id's of @lupin.com domain
+                            name.</p>
+                        <p>Kindly note that Lupin Limited (and/or its group companies) follows a formal recruitment
+                            process through its own HR department and does not outsource the final selection of
+                            prospective employees to any individuals or agencies. Further, Lupin Limited (and/or its
+                            group companies) does not ask for any security deposit or fees (refundable or non-refundable)
+                            at any stage of recruitment process.</p>
+                        <p>Please be advised that any potential job-seeker willingly corresponding with such individuals
+                            and recruitment agencies in any manner whether by e-mails or otherwise will be doing so at
+                            their own risks and consequences. Lupin Limited (and/or its group companies) strongly
+                            recommends that the potential job-seekers should not respond to such solicitations.</p>
+                        <p>Kindly note that Lupin Limited (and/or its group companies) will not accept any liability for
+                            any loss or damage that may be suffered or incurred directly or indirectly through
+                            correspondence with fraudulent individuals or recruitment agencies and that such
+                            communication should not be treated as an offer or representation from Lupin Limited
+                            (and/or its group companies).</p>
+                        <p>Should you come across any such fraudulent incident or have any information regarding
+                            solicitation for recruitment or employment with Lupin Limited (and/or its group companies),
+                            please assist us in taking appropriate action to curb such mala fide activities.</p>
+                        <div class="fraud-modal__contacts">
+                            <p>You may reach us:</p>
+                            <p>Mr. Raoul Dsouza – <a
+                                    href="mailto:raouldsouza@lupin.com">raouldsouza@lupin.com</a> | 022 66402113</p>
+                            <!-- <p>Ruchita Vartak – <a
+                                    href="mailto:ruchitavartak@lupin.com">ruchitavartak@lupin.com</a> | 022 66402118</p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            (function () {
+                var section = document.getElementById('section1');
+                var modal = section.querySelector('.fraud-modal');
+                var modalDialog = section.querySelector('.fraud-modal__dialog');
+                var closeTriggers = section.querySelectorAll('[data-fraud-modal-close]');
+                var modalTransitionMs = 350;
+                var modalCloseTimer;
+
+                function finishModalClose() {
+                    modal.classList.remove('is-closing');
+                    modal.setAttribute('aria-hidden', 'true');
+                    if (modalDialog) {
+                        modalDialog.classList.remove('is-dialog-open');
+                    }
+                    document.body.style.overflow = '';
+                }
+
+                function openModal() {
+                    if (typeof window.closeSection1Drawer === 'function') {
+                        window.closeSection1Drawer(true);
+                    }
+                    if (modalCloseTimer) {
+                        clearTimeout(modalCloseTimer);
+                        modalCloseTimer = null;
+                    }
+                    modal.classList.remove('is-closing');
+                    modal.classList.add('is-open');
+                    modal.setAttribute('aria-hidden', 'false');
+                    document.body.style.overflow = 'hidden';
+                    if (modalDialog) {
+                        requestAnimationFrame(function () {
+                            requestAnimationFrame(function () {
+                                modalDialog.classList.add('is-dialog-open');
+                            });
+                        });
+                    }
+                }
+
+                function closeModal() {
+                    if (!modal.classList.contains('is-open') || modal.classList.contains('is-closing')) {
+                        return;
+                    }
+
+                    if (modalCloseTimer) {
+                        clearTimeout(modalCloseTimer);
+                        modalCloseTimer = null;
+                    }
+
+                    modal.classList.remove('is-open');
+                    modal.classList.add('is-closing');
+
+                    if (modalDialog) {
+                        requestAnimationFrame(function () {
+                            modalDialog.classList.remove('is-dialog-open');
+                        });
+
+                        var onModalTransitionEnd = function (event) {
+                            if (event.target !== modalDialog) {
+                                return;
+                            }
+                            if (event.propertyName !== 'opacity' && event.propertyName !== 'transform') {
+                                return;
+                            }
+                            modalDialog.removeEventListener('transitionend', onModalTransitionEnd);
+                            if (modalCloseTimer) {
+                                clearTimeout(modalCloseTimer);
+                                modalCloseTimer = null;
+                            }
+                            finishModalClose();
+                        };
+
+                        modalDialog.addEventListener('transitionend', onModalTransitionEnd);
+                        modalCloseTimer = setTimeout(function () {
+                            modalDialog.removeEventListener('transitionend', onModalTransitionEnd);
+                            modalCloseTimer = null;
+                            finishModalClose();
+                        }, modalTransitionMs + 100);
+                    } else {
+                        finishModalClose();
+                    }
+                }
+
+                openModal();
+
+                section.addEventListener('click', function (event) {
+                    var fraudLink = event.target.closest('[data-fraud-modal-open]');
+                    if (fraudLink && section.contains(fraudLink)) {
+                        event.preventDefault();
+                        openModal();
+                    }
+                });
+
+                closeTriggers.forEach(function (trigger) {
+                    trigger.addEventListener('click', closeModal);
+                });
+
+                document.addEventListener('keydown', function (event) {
+                    if (event.key === 'Escape' && modal.classList.contains('is-open') && !modal.classList.contains('is-closing')) {
+                        closeModal();
+                    }
+                });
+            })();
+        </script>
+    </section>
+</body>
+
+</html>
