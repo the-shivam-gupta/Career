@@ -292,6 +292,131 @@
                 height: 1.354vw;
             }
 
+            #section1 .site-header__drawer {
+                position: fixed;
+                inset: 0;
+                z-index: 100;
+                visibility: hidden;
+                pointer-events: none;
+            }
+
+            #section1 .site-header__drawer.is-open,
+            #section1 .site-header__drawer.is-closing {
+                visibility: visible;
+            }
+
+            #section1 .site-header__drawer.is-open {
+                pointer-events: auto;
+            }
+
+            #section1 .site-header__drawer.is-closing {
+                pointer-events: none;
+            }
+
+            #section1 .site-header__drawer-overlay {
+                position: absolute;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.45);
+                opacity: 0;
+                transition: opacity 0.35s ease;
+            }
+
+            #section1 .site-header__drawer.is-open .site-header__drawer-overlay {
+                opacity: 1;
+            }
+
+            #section1 .site-header__drawer-panel {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: min(88vw, 22.917vw);
+                max-width: 100%;
+                height: 100%;
+                background: #FFF;
+                transform: translate3d(100%, 0, 0);
+                transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+                box-shadow: -0.208vw 0 1.042vw rgba(0, 0, 0, 0.12);
+                will-change: transform;
+            }
+
+            #section1 .site-header__drawer-panel.is-panel-open {
+                transform: translate3d(0, 0, 0);
+            }
+
+            #section1 .site-header__drawer-header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 1.042vw 1.25vw;
+                border-bottom: 0.052vw solid rgba(0, 0, 0, 0.08);
+            }
+
+            #section1 .site-header__drawer-title {
+                margin: 0;
+                color: #069C3C;
+                font-family: Inter, sans-serif;
+                font-size: 1.042vw;
+                font-weight: 700;
+                letter-spacing: 0.052vw;
+            }
+
+            #section1 .site-header__drawer-close {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 2.083vw;
+                height: 2.083vw;
+                padding: 0;
+                border: 0;
+                border-radius: 50%;
+                background: transparent;
+                color: #333;
+                font-size: 1.667vw;
+                line-height: 1;
+                cursor: pointer;
+            }
+
+            #section1 .site-header__drawer-body {
+                padding: 0.833vw 0 1.667vw;
+            }
+
+            #section1 .site-header__drawer-nav ul,
+            #section1 .site-header__drawer-links ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            #section1 .site-header__drawer-nav a,
+            #section1 .site-header__drawer-links a {
+                display: block;
+                padding: 0.729vw 1.25vw;
+                color: #1A1A1A;
+                font-family: Inter, sans-serif;
+                font-size: 0.938vw;
+                font-weight: 500;
+                line-height: 1.4;
+                text-decoration: none;
+                transition: background-color 0.2s ease, color 0.2s ease;
+            }
+
+            #section1 .site-header__drawer-nav a:hover,
+            #section1 .site-header__drawer-links a:hover {
+                background: #E8F5E9;
+                color: #069C3C;
+            }
+
+            #section1 .site-header__drawer-section {
+                padding: 0.625vw 0;
+                border-bottom: 0.052vw solid rgba(0, 0, 0, 0.08);
+            }
+
+            #section1 .site-header__drawer-section:last-child {
+                border-bottom: 0;
+            }
+
             @media (min-width: 1024px) and (max-width: 1440px) {
                 #section1 .site-header {
                     padding: 0.694vw 1.389vw 0.833vw;
@@ -390,6 +515,34 @@
 
                 #section1 .site-header__utility {
                     display: none;
+                }
+
+                #section1 .site-header__drawer-panel {
+                    width: min(88vw, 72vw);
+                }
+
+                #section1 .site-header__drawer-header {
+                    padding: 4.167vw 5.208vw;
+                }
+
+                #section1 .site-header__drawer-title {
+                    font-size: 3.646vw;
+                }
+
+                #section1 .site-header__drawer-close {
+                    width: 8.333vw;
+                    height: 8.333vw;
+                    font-size: 6.25vw;
+                }
+
+                #section1 .site-header__drawer-body {
+                    padding: 2.083vw 0 5.208vw;
+                }
+
+                #section1 .site-header__drawer-nav a,
+                #section1 .site-header__drawer-links a {
+                    padding: 3.125vw 5.208vw;
+                    font-size: 3.125vw;
                 }
 
                 #section1 .site-header__logo img {
@@ -751,7 +904,8 @@
                             </div>
                         </div>
                         <div class="site-header__menu">
-                            <button type="button" class="site-header__menu-btn" aria-label="Open menu">
+                            <button type="button" class="site-header__menu-btn" aria-label="Open menu"
+                                aria-expanded="false" aria-controls="section1-mobile-menu" data-mobile-menu-open>
                                 <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/hamburger_icon_5473136756.svg"
                                     alt="">
                                 Menu
@@ -760,6 +914,25 @@
                     </div>
                 </div>
             </header>
+            <div class="site-header__drawer" aria-hidden="true">
+                <div class="site-header__drawer-overlay" data-drawer-close></div>
+                <div class="site-header__drawer-panel" id="section1-mobile-menu" role="dialog" aria-modal="true"
+                    aria-label="Navigation menu">
+                    <div class="site-header__drawer-header">
+                        <p class="site-header__drawer-title">Menu</p>
+                        <button type="button" class="site-header__drawer-close" data-drawer-close
+                            aria-label="Close menu">&times;</button>
+                    </div>
+                    <div class="site-header__drawer-body">
+                        <nav class="site-header__drawer-nav" aria-label="Main navigation">
+                            <ul></ul>
+                        </nav>
+                        <div class="site-header__drawer-section site-header__drawer-links">
+                            <ul></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <h1>Join Us in Shaping the Future of Healthcare</h1>
             <picture>
                 <source
@@ -820,10 +993,139 @@
             (function () {
                 var section = document.getElementById('section1');
                 var modal = section.querySelector('.fraud-modal');
-                var openBtn = section.querySelector('[data-fraud-modal-open]');
                 var closeTriggers = section.querySelectorAll('[data-fraud-modal-close]');
+                var drawer = section.querySelector('.site-header__drawer');
+                var drawerPanel = section.querySelector('.site-header__drawer-panel');
+                var menuBtn = section.querySelector('[data-mobile-menu-open]');
+                var drawerCloseTriggers = section.querySelectorAll('[data-drawer-close]');
+                var drawerTransitionMs = 350;
+                var drawerCloseTimer;
+
+                function syncDrawerLinks() {
+                    var desktopNav = section.querySelector('.site-header__nav ul');
+                    var drawerNav = section.querySelector('.site-header__drawer-nav ul');
+                    var desktopTopLinks = section.querySelector('.site-header__top-links');
+                    var drawerTopLinks = section.querySelector('.site-header__drawer-links ul');
+
+                    if (desktopNav && drawerNav) {
+                        drawerNav.innerHTML = desktopNav.innerHTML;
+                    }
+
+                    if (desktopTopLinks && drawerTopLinks) {
+                        drawerTopLinks.innerHTML = '';
+                        desktopTopLinks.querySelectorAll('a').forEach(function (link) {
+                            var item = document.createElement('li');
+                            item.appendChild(link.cloneNode(true));
+                            drawerTopLinks.appendChild(item);
+                        });
+                    }
+                }
+
+                function finishDrawerClose() {
+                    if (!drawer) {
+                        return;
+                    }
+                    drawer.classList.remove('is-closing');
+                    drawer.setAttribute('aria-hidden', 'true');
+                    if (drawerPanel) {
+                        drawerPanel.classList.remove('is-panel-open');
+                    }
+                    if (!modal.classList.contains('is-open')) {
+                        document.body.style.overflow = '';
+                    }
+                }
+
+                function closeDrawer(instant) {
+                    instant = instant === true;
+
+                    if (!drawer || (!drawer.classList.contains('is-open') && !drawer.classList.contains('is-closing'))) {
+                        return;
+                    }
+
+                    if (drawerCloseTimer) {
+                        clearTimeout(drawerCloseTimer);
+                        drawerCloseTimer = null;
+                    }
+
+                    if (menuBtn) {
+                        menuBtn.setAttribute('aria-expanded', 'false');
+                    }
+
+                    if (instant) {
+                        if (drawerPanel) {
+                            drawerPanel.classList.remove('is-panel-open');
+                        }
+                        drawer.classList.remove('is-open', 'is-closing');
+                        drawer.setAttribute('aria-hidden', 'true');
+                        if (!modal.classList.contains('is-open')) {
+                            document.body.style.overflow = '';
+                        }
+                        return;
+                    }
+
+                    drawer.classList.remove('is-open');
+                    drawer.classList.add('is-closing');
+
+                    if (drawerPanel) {
+                        requestAnimationFrame(function () {
+                            drawerPanel.classList.remove('is-panel-open');
+                        });
+
+                        var onTransitionEnd = function (event) {
+                            if (event.target !== drawerPanel) {
+                                return;
+                            }
+                            if (event.propertyName !== 'transform' && event.propertyName !== '-webkit-transform') {
+                                return;
+                            }
+                            drawerPanel.removeEventListener('transitionend', onTransitionEnd);
+                            if (drawerCloseTimer) {
+                                clearTimeout(drawerCloseTimer);
+                                drawerCloseTimer = null;
+                            }
+                            finishDrawerClose();
+                        };
+
+                        drawerPanel.addEventListener('transitionend', onTransitionEnd);
+                        drawerCloseTimer = setTimeout(function () {
+                            drawerPanel.removeEventListener('transitionend', onTransitionEnd);
+                            drawerCloseTimer = null;
+                            finishDrawerClose();
+                        }, drawerTransitionMs + 100);
+                    } else {
+                        finishDrawerClose();
+                    }
+                }
+
+                function openDrawer() {
+                    if (!drawer) {
+                        return;
+                    }
+                    if (drawerCloseTimer) {
+                        clearTimeout(drawerCloseTimer);
+                        drawerCloseTimer = null;
+                    }
+                    drawer.classList.remove('is-closing');
+                    drawer.classList.add('is-open');
+                    drawer.setAttribute('aria-hidden', 'false');
+                    if (menuBtn) {
+                        menuBtn.setAttribute('aria-expanded', 'true');
+                    }
+                    document.body.style.overflow = 'hidden';
+                    if (typeof closeLanguageMenu === 'function') {
+                        closeLanguageMenu();
+                    }
+                    if (drawerPanel) {
+                        requestAnimationFrame(function () {
+                            requestAnimationFrame(function () {
+                                drawerPanel.classList.add('is-panel-open');
+                            });
+                        });
+                    }
+                }
 
                 function openModal() {
+                    closeDrawer(true);
                     modal.classList.add('is-open');
                     modal.setAttribute('aria-hidden', 'false');
                     document.body.style.overflow = 'hidden';
@@ -832,15 +1134,20 @@
                 function closeModal() {
                     modal.classList.remove('is-open');
                     modal.setAttribute('aria-hidden', 'true');
-                    document.body.style.overflow = '';
+                    if (!drawer || (!drawer.classList.contains('is-open') && !drawer.classList.contains('is-closing'))) {
+                        document.body.style.overflow = '';
+                    }
                 }
 
-                if (openBtn) {
-                    openBtn.addEventListener('click', function (event) {
+                syncDrawerLinks();
+
+                section.addEventListener('click', function (event) {
+                    var fraudLink = event.target.closest('[data-fraud-modal-open]');
+                    if (fraudLink && section.contains(fraudLink)) {
                         event.preventDefault();
                         openModal();
-                    });
-                }
+                    }
+                });
 
                 closeTriggers.forEach(function (trigger) {
                     trigger.addEventListener('click', closeModal);
@@ -887,6 +1194,30 @@
                 document.addEventListener('keydown', function (event) {
                     if (event.key === 'Escape' && language && language.classList.contains('is-open')) {
                         closeLanguageMenu();
+                    }
+                });
+
+                if (menuBtn) {
+                    menuBtn.addEventListener('click', function (event) {
+                        event.preventDefault();
+                        if (drawer.classList.contains('is-open')) {
+                            closeDrawer();
+                        } else {
+                            openDrawer();
+                        }
+                    });
+                }
+
+                drawerCloseTriggers.forEach(function (trigger) {
+                    trigger.addEventListener('click', function (event) {
+                        event.preventDefault();
+                        closeDrawer(false);
+                    });
+                });
+
+                document.addEventListener('keydown', function (event) {
+                    if (event.key === 'Escape' && drawer && drawer.classList.contains('is-open')) {
+                        closeDrawer();
                     }
                 });
             })();
