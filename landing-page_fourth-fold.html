@@ -83,19 +83,26 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                font-size: 1.667vw;
-                line-height: 1;
                 padding: 0;
+            }
+
+            #section4 .section4-nav button img {
+                width: 0.953vw;
+                height: 0.953vw;
+                display: block;
             }
 
             #section4 .section4-prev {
                 background: rgba(0, 0, 0, 0.25);
-                color: #FFF;
             }
 
             #section4 .section4-next {
                 background: #FFF;
-                color: #2d6b64;
+            }
+
+            #section4 .section4-next img {
+                transform: rotate(180deg);
+                filter: brightness(0) saturate(100%) invert(31%) sepia(22%) saturate(1019%) hue-rotate(127deg) brightness(91%) contrast(88%);
             }
 
             #section4 .section4-nav button:disabled {
@@ -157,7 +164,11 @@
                 #section4 .section4-nav button{
                     width: 3.819vw;
                     height: 3.819vw;
-                    font-size: 2.389vw;
+                }
+
+                #section4 .section4-nav button img {
+                    width: 1.365vw;
+                    height: 1.365vw;
                 }
                 #section4 .section4-intro h2{
                     font-size: 2.734vw;
@@ -219,7 +230,11 @@
                 #section4 .section4-nav button{
                     width: 5.51vw;
                     height: 5.51vw;
-                    font-size: 3.51vw;
+                }
+
+                #section4 .section4-nav button img {
+                    width: 2.006vw;
+                    height: 2.006vw;
                 }
                 #section4 .section4-intro p{
                     font-size: 1.823vw;
@@ -245,7 +260,11 @@
                 #section4 .section4-nav button{
                     width: 8.588vw;
                     height: 8.588vw;
-                    font-size: 5vw;
+                }
+
+                #section4 .section4-nav button img {
+                    width: 2.857vw;
+                    height: 2.857vw;
                 }
                 #section4 .section4-slider{
                     margin-left: -5vw;
@@ -291,8 +310,12 @@
                 </div>
             </div>
             <div class="section4-nav">
-                <button type="button" class="section4-prev" aria-label="Previous slide">&#8249;</button>
-                <button type="button" class="section4-next" aria-label="Next slide">&#8250;</button>
+                <button type="button" class="section4-prev" aria-label="Previous slide">
+                    <img src="https://www.lupin.com/uploads/left_arrow_8f7432512c.svg" alt="">
+                </button>
+                <button type="button" class="section4-next" aria-label="Next slide">
+                    <img src="https://www.lupin.com/uploads/left_arrow_8f7432512c.svg" alt="">
+                </button>
             </div>
         </div>
         <script>
