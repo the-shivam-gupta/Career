@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers Page - Section 7</title>
+</head>
+
+<body>
+    <section id="section7">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+            }
+
+            #section7 {
+                position: relative;
+            }
+
+            #section7 .section7-wrapper {
+                position: relative;
+                display: grid;
+            }
+
+            #section7 .section7-banner,
+            #section7 .section7-content {
+                grid-area: 1 / 1;
+            }
+
+            #section7 .section7-banner img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                min-height: 100%;
+                object-fit: cover;
+            }
+
+            #section7 .section7-content {
+                align-self: center;
+                justify-self: stretch;
+                width: 100%;
+                box-sizing: border-box;
+                padding: 3.333vw 62% 3.333vw 3.646vw;
+                z-index: 2;
+                text-align: left;
+            }
+
+            #section7 .section7-content h2,
+            #section7 .section7-content p {
+                max-width: 40vw;
+            }
+
+            #section7 .section7-content h2 {
+                color: #FFF;
+                font-family: Inter, sans-serif;
+                font-size: 2.083vw;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 2.969vw;
+                margin: 0 0 1.667vw;
+            }
+
+            #section7 .section7-content p {
+                color: #FFF;
+                font-family: Inter, sans-serif;
+                font-size: 0.990vw;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 1.510vw;
+                margin: 0 0 1.146vw;
+            }
+
+            #section7 .section7-content p:last-of-type {
+                margin-bottom: 0;
+            }
+
+            @media (max-width: 1024px) {
+                #section7 .section7-content {
+                    padding: 3.125vw 46% 3.125vw 5.859vw;
+                }
+
+                #section7 .section7-content h2,
+                #section7 .section7-content p {
+                    max-width: 41.016vw;
+                }
+                #section7 .section7-content p{
+                    font-size: 1.563vw;
+                    line-height: 2.637vw;
+                }
+                #section7 .section7-content h2{
+                    font-size: 2.734vw;
+                    line-height: 3.516vw;
+                }
+            }
+
+            @media (max-width: 768px) {
+                #section7 .section7-content {
+                    padding: 3.646vw 44% 3.646vw 5.208vw;
+                }
+
+                #section7 .section7-content h2,
+                #section7 .section7-content p {
+                    max-width: 40.365vw;
+                }
+                #section7 .section7-content p{
+                    font-size: 1.823vw;
+                    line-height: 2.214vw;
+                }
+
+                #section7 .section7-content h2 {
+                    font-size: 2.865vw;
+                    line-height: 3.906vw;
+                }
+            }
+
+            @media (max-width: 425px) {
+                #section7 .section7-content {
+                    width: 90%;
+                    max-width: none;
+                    padding: 7.529vw 4.706vw 0;
+                    align-self: start;
+                    justify-self: stretch;
+                }
+
+                #section7 .section7-content h2,
+                #section7 .section7-content p {
+                    max-width: none;
+                }
+
+                #section7 .section7-content h2 {
+                    font-size: 5.176vw;
+                    line-height: 6.588vw;
+                    margin-bottom: 3.765vw;
+                }
+
+                #section7 .section7-content p {
+                    font-size: 2.824vw;
+                    line-height: 4.235vw;
+                    margin-bottom: 2.824vw;
+                }
+            }
+        </style>
+        <div class="section7-wrapper">
+            <picture class="section7-banner">
+                <source
+                    srcset="https://cmsuatlupin.blob.core.windows.net/public/uploads/section7_mbl_banner_7586554e47.png"
+                    media="(max-width: 425px)" type="image/png">
+                <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/section7_banner_96186f1370.png"
+                    alt="Professionals smiling together in a modern office">
+            </picture>
+            <div class="section7-content">
+                <h2>Empowering Growth Through Continuous Learning</h2>
+                <p>Our learning and development programs are designed to help you stay relevant, build new capabilities,
+                    and prepare for what comes next. Across roles and levels, employees have access to structured
+                    learning, real-world exposure, and opportunities to grow within the organization.</p>
+                <p>For high-performing talent and aspiring scientists, our ASCENT program offers the opportunity to
+                    pursue a fully supported PhD, combining academic depth with practical impact and reinforcing our
+                    commitment to lifelong learning.</p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

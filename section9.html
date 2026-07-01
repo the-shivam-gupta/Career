@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers Page - Section 9</title>
+</head>
+
+<body>
+    <section id="section9">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+            }
+
+            #section9 {
+                position: relative;
+            }
+
+            #section9 .section9-wrapper {
+                position: relative;
+                display: grid;
+            }
+
+            #section9 .section9-banner,
+            #section9 .section9-content {
+                grid-area: 1 / 1;
+            }
+
+            #section9 .section9-banner img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                min-height: 100%;
+                object-fit: cover;
+            }
+
+            #section9 .section9-content {
+                z-index: 2;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 4.167vw 3.646vw;
+                box-sizing: border-box;
+            }
+
+            #section9 .section9-cards {
+                display: flex;
+                align-items: stretch;
+                gap: 1.563vw;
+                max-width: 57.813vw;
+                width: 100%;
+            }
+
+            #section9 .section9-card {
+                background: #0431388a;
+                border-radius: 1.146vw;
+                flex: 1 1 0;
+                min-width: 0;
+                padding: 1.875vw 2.5vw;
+                box-sizing: border-box;
+            }
+
+            #section9 .section9-card-text {
+                position: relative;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            #section9 .section9-card-copy {
+                position: relative;
+                z-index: 1;
+            }
+
+            #section9 .section9-card-petal {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                height: auto;
+                width: auto;
+                pointer-events: none;
+                user-select: none;
+            }
+
+            #section9 .section9-card-text h2 {
+                color: #FFF;
+                font-family: Inter, sans-serif;
+                font-size: 2.5vw;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 3.021vw;
+                margin: 0 0 0.313vw;
+                white-space: nowrap;
+            }
+
+            #section9 .section9-card-text p {
+                color: #FFF;
+                font-family: Inter, sans-serif;
+                font-size: 0.990vw;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 1.510vw;
+                margin: 0;
+                white-space: nowrap;
+            }
+
+            #section9 .section9-card-social {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            #section9 .section9-divider {
+                width: 0.104vw;
+                align-self: stretch;
+                background: rgba(255, 255, 255, 0.55);
+                flex-shrink: 0;
+            }
+
+            #section9 .section9-social {
+                display: flex;
+                align-items: flex-end;
+                gap: 2.083vw;
+            }
+
+            #section9 .section9-social a {
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+                transition: opacity 0.2s ease;
+            }
+
+            #section9 .section9-social a:hover {
+                opacity: 0.75;
+            }
+
+            #section9 .section9-social img {
+                display: block;
+                width: 1.771vw;
+                height: auto;
+                max-height: 1.771vw;
+                object-fit: contain;
+                object-position: bottom;
+            }
+
+            @media (max-width: 1024px) {
+                #section9 .section9-content {
+                    padding: 5.859vw 3.906vw;
+                }
+
+                #section9 .section9-cards {
+                    max-width: 89.844vw;
+                    gap: 1.563vw;
+                }
+
+                #section9 .section9-card {
+                    padding: 3.758vw 2.344vw;
+                }
+
+                #section9 .section9-card-text h2 {
+                    font-size: 2.539vw;
+                }
+
+                #section9 .section9-card-text p {
+                    font-size: 1.367vw;
+                }
+
+                #section9 .section9-social {
+                    gap: 2.93vw;
+                }
+
+                #section9 .section9-social img {
+                    width: 2.734vw;
+                    max-height: 2.734vw;
+                }
+
+                #section9 .section9-card-petal {
+                    height: 75%;
+                }
+            }
+
+            @media (max-width: 768px) {
+                #section9 .section9-content {
+                    padding: 6.25vw 2.604vw;
+                }
+
+                #section9 .section9-cards {
+                    flex-direction: column;
+                    gap: 2.083vw;
+                    --section9-card-height: 18.833vw;
+                }
+
+                #section9 .section9-card {
+                    flex: none;
+                    width: 100%;
+                    height: var(--section9-card-height);
+                    padding: 2.604vw 3.906vw;
+                    text-align: center;
+                }
+
+                #section9 .section9-card-text h2,
+                #section9 .section9-card-text p {
+                    white-space: normal;
+                }
+                #section9 .section9-card-text h2{
+                    font-size: 5.176vw;
+                    line-height: 6.588vw;
+                }
+                #section9 .section9-card-text p{
+                    font-size: 1.763vw;
+                    line-height: 2.637vw;
+                }
+
+                #section9 .section9-card-social {
+                    justify-content: center;
+                }
+
+                #section9 .section9-divider {
+                    display: none;
+                }
+
+                #section9 .section9-social {
+                    gap: 3.125vw;
+                }
+
+                #section9 .section9-card-petal {
+                    height: 60%;
+                    opacity: 0.6;
+                }
+                #section9 .section9-social img{
+                    width: 5.125vw;
+                    max-height: 5.125vw;
+                }
+            }
+
+            @media (max-width: 425px) {
+                #section9 .section9-content {
+                    padding: 7.529vw 3.765vw;
+                }
+
+                #section9 .section9-cards {
+                    --section9-card-height: 30.588vw;
+                }
+
+                #section9 .section9-card {
+                    padding: 3.765vw 4.706vw;
+                    border-radius: 2.146vw;
+                }
+
+                #section9 .section9-card-text h2 {
+                    font-size: 5.176vw;
+                    margin-bottom: 3vw;
+                }
+
+                #section9 .section9-card-text p {
+                    font-size: 3.059vw;
+                    line-height: 4.235vw;
+                }
+
+                #section9 .section9-social {
+                    gap: 4.706vw;
+                }
+
+                #section9 .section9-social img {
+                    width: 6.176vw;
+                    max-height: 6.176vw;
+                }
+            }
+        </style>
+        <div class="section9-wrapper">
+            <picture class="section9-banner">
+                <source
+                    srcset="https://cmsuatlupin.blob.core.windows.net/public/uploads/section9_mbl_banner_99c8005865.png"
+                    media="(max-width: 425px)" type="image/png">
+                <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/section9_banner_1489473841.png"
+                    alt="Team collaborating at Lupin Research Park">
+            </picture>
+            <div class="section9-content">
+                <div class="section9-cards">
+                    <div class="section9-card section9-card-text">
+                        <img class="section9-card-petal"
+                            src="https://cmsuatlupin.blob.core.windows.net/public/uploads/side_petal_960ea2ee68.svg"
+                            alt="" aria-hidden="true">
+                        <div class="section9-card-copy">
+                            <h2>Connect With Us</h2>
+                            <p>Follow our social channels to get a<br/> glimpse of life at Lupin</p>
+                        </div>
+                    </div>
+                    <div class="section9-divider" aria-hidden="true"></div>
+                    <div class="section9-card section9-card-social">
+                        <div class="section9-social">
+                            <a href="#" aria-label="Follow Lupin on X">
+                                <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/X_199642a319.svg"
+                                    alt="">
+                            </a>
+                            <a href="#" aria-label="Follow Lupin on Facebook">
+                                <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/facebook_95f7283991.svg"
+                                    alt="">
+                            </a>
+                            <a href="#" aria-label="Follow Lupin on Instagram">
+                                <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/instagram_d774115618.svg"
+                                    alt="">
+                            </a>
+                            <a href="#" aria-label="Follow Lupin on LinkedIn">
+                                <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/linked_In_833e50d0a0.svg"
+                                    alt="">
+                            </a>
+                            <a href="#" aria-label="Follow Lupin on YouTube">
+                                <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/yt_7efa8f2035.svg"
+                                    alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

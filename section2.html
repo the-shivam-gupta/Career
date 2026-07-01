@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers Page - Section 2</title>
+</head>
+
+<body>
+    <section id="section2">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+            }
+
+            #section2 {
+                position: relative;
+            }
+
+            #section2 .section2-wrapper {
+                position: relative;
+                display: grid;
+            }
+
+            #section2 .section2-wrapper picture {
+                grid-area: 1 / 1;
+                display: block;
+            }
+
+            #section2 .section2-wrapper picture,
+            #section2 .section2-content {
+                grid-area: 1 / 1;
+            }
+
+            #section2 .section2-wrapper img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                min-height: 100%;
+                object-fit: cover;
+            }
+
+            #section2 .section2-content {
+                align-self: center;
+                justify-self: start;
+                width: 38%;
+                max-width: 40vw;
+                padding: 3.333vw 1.979vw 3.333vw 3.646vw;
+                z-index: 1;
+            }
+
+            #section2 h2 {
+                color: #FFF;
+                font-family: Inter;
+                font-size: 2.083vw;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 2.969vw;
+                margin: 0 0 1.979vw;
+            }
+
+            #section2 p {
+                color: #FFF;
+                font-family: Inter;
+                font-size: 0.990vw;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 1.406vw;
+                margin: 0 0 1.667vw;
+            }
+
+            #section2 .section2-btn {
+                display: inline-block;
+                border-radius: 1.406vw;
+                background: linear-gradient(90deg, #09A341 0%, #38D973 100%);
+                color: #FFF;
+                font-family: Inter, sans-serif;
+                font-size: 1.146vw;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 1.354vw;
+                padding: 0.625vw 1.875vw;
+                border: none;
+                cursor: pointer;
+                text-decoration: none;
+            }
+
+            @media (min-width: 1024px) and (max-width: 1440px) {
+                #section2 .section2-content {
+                    width: 50%;
+                    max-width: 27.083vw;
+                    padding: 1.667vw 1.042vw 1.667vw 2.083vw;
+                }
+            }
+
+            @media (max-width: 1024px) {
+                #section2 .section2-content {
+                    width: 55%;
+                    max-width: none;
+                    padding: 3.125vw 1.953vw 3.125vw 3.906vw;
+                }
+                #section2 h2{
+                    font-size: 2.734vw;
+                    line-height: 3.516vw;
+                }
+                #section2 p{
+                    font-size: 1.563vw;
+                    line-height: 2.637vw;
+                }
+                #section2 .section2-btn{
+                    font-size: 1.758vw; 
+                    padding: 1.379vw 3.958vw;
+                }
+            }
+
+            @media (max-width: 768px) {
+                #section2 .section2-content {
+                    width: 55%;
+                    padding: 3.646vw 5.208vw;
+                }
+
+                #section2 h2 {
+                    font-size: 2.865vw;
+                    line-height: 3.646vw;
+                    margin-bottom: 2.083vw;
+                }
+
+                #section2 p {
+                    font-size: 1.823vw;
+                    line-height: 2.214vw;
+                    margin-bottom: 1.823vw;
+                }
+                #section2 .section2-btn{
+                    font-size: 1.823vw; 
+                    padding: 1.781vw 3.646vw;
+                    border-radius: 4.146vw;
+                }
+            }
+
+            @media (max-width: 425px) {
+                #section2 .section2-content {
+                    width: 80%;
+                    padding: 7.529vw 4.706vw 9.412vw;
+                    align-self: start;
+                }
+
+                #section2 h2 {
+                    font-size: 5.176vw;
+                    line-height: 6.588vw;
+                }
+                #section2 p{
+                    font-size: 2.824vw;
+                    line-height: 4.235vw;
+                    margin-bottom: 2.824vw;
+                }
+                #section2 .section2-btn{
+                    font-size: 3.294vw;
+                    padding: 3.146vw 5vw;
+                    border-radius: 4.146vw;
+                }
+            }
+        </style>
+        <div class="section2-wrapper">
+            <picture>
+                <source
+                    srcset="https://cmsuatlupin.blob.core.windows.net/public/uploads/section2_mbl_banner_ccc29223e8.png"
+                    media="(max-width: 425px)" type="image/png">
+                <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/section2_banner_9b0118c5dc.png"
+                    alt="Scientists collaborating in a laboratory">
+            </picture>
+            <div class="section2-content">
+                <h2>Our Purpose Is the Binding Force Behind Everything We Do</h2>
+                <p>At Lupin, we catalyze treatments that transform hope into healing, and this purpose shapes our
+                    culture and the work we do. It guides our actions, defines our values, and inspires us to show up
+                    every day with an intent to make a difference.</p>
+                <p>When you join us, you become part of a team united by a shared commitment to translate scientific
+                    innovation into meaningful impact. Every role, every idea, and every breakthrough contributes to
+                    shaping a healthier future for patients, communities, and generations to come.</p>
+                <p>Come, be part of a shared purpose. Come, transform hope into healing.</p>
+                <a href="#" class="section2-btn">Explore Current Opportunities</a>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

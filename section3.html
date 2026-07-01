@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers Page - Section 3</title>
+</head>
+
+<body>
+    <section id="section3">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+            }
+
+            #section3 {
+                position: relative;
+            }
+
+            #section3 .section3-wrapper {
+                position: relative;
+                display: grid;
+            }
+
+            #section3 .section3-banner {
+                grid-area: 1 / 1;
+            }
+
+            #section3 .section3-banner,
+            #section3 .section3-content {
+                grid-area: 1 / 1;
+            }
+
+            #section3 .section3-banner img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                min-height: 100%;
+                object-fit: cover;
+            }
+
+            #section3 .section3-content {
+                z-index: 2;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                padding: 4.167vw 3.646vw;
+            }
+
+            #section3 .section3-intro {
+                max-width: 60vw;
+                margin-bottom: 3.021vw;
+            }
+
+            #section3 .section3-intro h2 {
+                color: #FFF;
+                text-align: center;
+                font-family: Inter, sans-serif;
+                font-size: 2.083vw;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 2.969vw;
+                margin: 0 0 1.354vw;
+            }
+
+            #section3 .section3-intro p {
+                color: #FFF;
+                text-align: center;
+                font-family: Inter, sans-serif;
+                font-size: 0.990vw;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 1.510vw;
+                margin: 0;
+            }
+
+            #section3 .section3-cards {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1.563vw;
+                width: 100%;
+                margin: auto;
+            }
+
+            #section3 .section3-card {
+                width: 16.25vw;
+                min-height: 16.667vw;
+                height: auto;
+                flex-shrink: 0;
+                border-radius: 1.354vw;
+                border: 0.039vw solid #D9D9D9;
+                padding: 1.146vw;
+            }
+
+            #section3 .section3-card-header {
+                display: flex;
+                align-items: flex-start;
+                gap: 0.521vw;
+                margin-bottom: 1.25vw;
+                min-height: 2.656vw;
+            }
+
+            #section3 .section3-card-icon {
+                width: 1.042vw;
+                height: 1.042vw;
+                flex-shrink: 0;
+                margin-top: 0.156vw;
+            }
+
+            #section3 .section3-card h3 {
+                flex: 1;
+                min-width: 0;
+                color: #FFF;
+                font-family: Inter, sans-serif;
+                font-size: 0.938vw;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 1.406vw;
+                margin: 0;
+            }
+
+            #section3 .section3-card p {
+                color: #FFF;
+                font-family: Inter, sans-serif;
+                font-size: 0.990vw;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 1.510vw;
+                margin: 0;
+            }
+
+            @media (min-width: 1024px) and (max-width: 1440px) {
+                #section3 .section3-content {
+                    padding: 2.083vw 2.083vw 2.292vw;
+                }
+
+                #section3 .section3-card {
+                    height: auto;
+                    padding: 0.938vw;
+                    width: 15.625vw;
+                }
+                #section3 .section3-intro h2{
+                    font-size: 2.734vw;
+                    line-height: 3.516vw;
+                }
+                #section3 .section3-cards{
+                    gap: 1.042vw;
+                }
+                #section3 .section3-intro p{
+                    font-size: 1.563vw;
+                    line-height: 2.637vw;
+                }
+                #section3 .section3-card p{
+                    font-size: 0.833vw;
+                    line-height: 1.406vw;
+                }
+                #section3 .section3-card-header{
+                    min-height: 4.271vw;
+                }
+            }
+
+            @media (max-width: 768px) {
+                #section3 .section3-content {
+                    padding: 4.688vw 3.125vw 5.208vw;
+                }
+
+                #section3 .section3-intro h2 {
+                    font-size: 2.865vw;
+                    line-height: 3.906vw;
+                }
+                #section3 .section3-intro p{
+                    font-size: 1.823vw;
+                    line-height: 2.214vw;
+                }
+                #section3 .section3-card{
+                    width: 27.25vw;
+                    padding: 2.146vw;
+                }
+                #section3 .section3-card p{
+                    font-size: 1.623vw;
+                    line-height: 2.214vw;
+                }
+                #section3 .section3-card h3{
+                    font-size: 1.823vw;
+                    line-height: 2.214vw;
+                }
+                #section3 .section3-card-icon{
+                    width: 2.214vw;
+                    height: 2.214vw;
+                }
+            }
+
+            @media (max-width: 425px) {
+                #section3 .section3-card {
+                    width: 40vw;
+                    min-height: 51.454vw;
+                    height: auto;
+                }
+                #section3 .section3-intro {
+                    margin-bottom: 5.647vw;
+                    text-align: left;
+                    max-width: 100%;
+                }
+
+                #section3 .section3-intro h2,
+                #section3 .section3-intro p {
+                    text-align: left;
+                }
+                #section3 .section3-intro h2{
+                    font-size: 5.176vw;
+                    line-height: 6.588vw;
+                }
+                #section3 .section3-intro p{
+                    width: 85%;
+                    font-size: 2.824vw;
+                    line-height: 4.235vw;
+                    margin-bottom: 2.824vw;
+                }
+
+                #section3 .section3-content {
+                    padding: 7.529vw 4.706vw 9.412vw;
+                    align-self: start;
+                }
+
+                #section3 .section3-cards {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 2.824vw;
+                }
+
+                #section3 .section3-card {
+                    width: 100%;
+                    max-width: none;
+                    padding: 2.824vw;
+                    border-radius: 4.146vw;
+                }
+                #section3 .section3-card p{
+                    font-size: 2.624vw;
+                    line-height: 4vw;
+                }
+                #section3 .section3-card-icon{
+                    width: 3.765vw;
+                    height: 3.765vw;
+                }
+                #section3 .section3-card h3{
+                    font-size: 3.294vw;
+                    line-height: 5.176vw;
+                }
+                #section3 .section3-card-header{
+                    margin-bottom: 0;
+                    min-height: 16.941vw;
+                    gap: 0.706vw;
+                }
+            }
+        </style>
+        <div class="section3-wrapper">
+            <picture class="section3-banner">
+                <source
+                    srcset="https://cmsuatlupin.blob.core.windows.net/public/uploads/section_3_mbl_banner_b2e360997f.png"
+                    media="(max-width: 425px)" type="image/png">
+                <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/section3_banner_9cde9a16cb.png"
+                    alt="Lupin Careers">
+            </picture>
+            <div class="section3-content">
+                <div class="section3-intro">
+                    <h2>Start Your Journey With Us</h2>
+                    <p>If you are ready to learn, grow, and make an impact early on, we are here to help you. Through
+                        our
+                        partnerships with leading institutions and immersive learning opportunities, we invest in talent
+                        that will help shape the future of healthcare.</p>
+                </div>
+                <div class="section3-cards">
+                    <div class="section3-card">
+                        <div class="section3-card-header">
+                            <img class="section3-card-icon"
+                                src="https://cmsuatlupin.blob.core.windows.net/public/uploads/petal_e45c6fdf5d.svg"
+                                alt="">
+                            <h3>Internship Program</h3>
+                        </div>
+                        <p>Work on real-world projects, collaborate with experienced teams, and gain valuable exposure
+                            to
+                            the healthcare industry.</p>
+                    </div>
+                    <div class="section3-card">
+                        <div class="section3-card-header">
+                            <img class="section3-card-icon"
+                                src="https://cmsuatlupin.blob.core.windows.net/public/uploads/petal_e45c6fdf5d.svg"
+                                alt="">
+                            <h3>Graduate Engineer Trainee Program</h3>
+                        </div>
+                        <p>Build technical expertise and prepare for long-term growth through a structured development
+                            journey designed to strengthen both knowledge and practical experience.</p>
+                    </div>
+                    <div class="section3-card">
+                        <div class="section3-card-header">
+                            <img class="section3-card-icon"
+                                src="https://cmsuatlupin.blob.core.windows.net/public/uploads/petal_e45c6fdf5d.svg"
+                                alt="">
+                            <h3>Management Trainee Program</h3>
+                        </div>
+                        <p>Gain cross-functional exposure and hands-on experience that helps build a strong foundation
+                            for
+                            future leadership opportunities.</p>
+                    </div>
+                    <!-- <div class="section3-card">
+                        <div class="section3-card-header">
+                            <img class="section3-card-icon"
+                                src="https://cmsuatlupin.blob.core.windows.net/public/uploads/petal_e45c6fdf5d.svg"
+                                alt="">
+                            <h3>Scholarship Program</h3>
+                        </div>
+                        <p>Be recognized through the Lupin Scholar Award, with financial support extended to
+                            high-potential
+                            students pursuing academic excellence.</p>
+                    </div> -->
+                    <div class="section3-card">
+                        <div class="section3-card-header">
+                            <img class="section3-card-icon"
+                                src="https://cmsuatlupin.blob.core.windows.net/public/uploads/petal_e45c6fdf5d.svg"
+                                alt="">
+                            <h3>Research Internship Program</h3>
+                        </div>
+                        <p>Experience immersive research through the Lupin Program for Research Interns (LPRI), learning
+                            under expert mentorship at Lupin Research Park and building pathways to scientific careers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

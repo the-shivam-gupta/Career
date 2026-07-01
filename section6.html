@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers Page - Section 6</title>
+</head>
+
+<body>
+    <section id="section6">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+            }
+
+            #section6 {
+                position: relative;
+            }
+
+            #section6 .section6-wrapper {
+                position: relative;
+                display: grid;
+            }
+
+            #section6 .section6-banner,
+            #section6 .section6-content {
+                grid-area: 1 / 1;
+            }
+
+            #section6 .section6-banner img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                min-height: 100%;
+                object-fit: cover;
+            }
+
+            #section6 .section6-content {
+                align-self: center;
+                justify-self: stretch;
+                width: 100%;
+                box-sizing: border-box;
+                padding: 3.333vw 5.990vw 3.333vw 54%;
+                z-index: 2;
+                text-align: left;
+            }
+
+            #section6 .section6-content h2,
+            #section6 .section6-content p {
+                max-width: 40vw;
+            }
+
+            #section6 .section6-content h2 {
+                color: #FFF;
+                font-family: Inter, sans-serif;
+                font-size: 2.083vw;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 2.969vw;
+                margin: 0 0 1.667vw;
+            }
+
+            #section6 .section6-content p {
+                color: #FFF;
+                font-family: Inter, sans-serif;
+                font-size: 0.990vw;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 1.510vw;
+                margin: 0 0 1.146vw;
+            }
+
+            #section6 .section6-content p:last-of-type {
+                margin-bottom: 0;
+            }
+
+            @media (max-width: 1024px) {
+                #section6 .section6-content {
+                    padding: 3.125vw 5.469vw 3.125vw 52%;
+                }
+
+                #section6 .section6-content h2,
+                #section6 .section6-content p {
+                    max-width: 41.016vw;
+                }
+                #section6 .section6-content p{
+                    font-size: 1.563vw;
+                    line-height: 2.637vw;
+                }
+                #section6 .section6-content h2{
+                    font-size: 2.734vw;
+                    line-height: 3.516vw;
+                }
+            }
+
+            @media (max-width: 768px) {
+                #section6 .section6-content {
+                    padding: 3.646vw 5.208vw 3.646vw 50%;
+                }
+
+                #section6 .section6-content h2,
+                #section6 .section6-content p {
+                    max-width: 46.875vw;
+                }
+                #section6 .section6-content p{
+                    font-size: 1.823vw;
+                    line-height: 2.214vw;
+                }
+
+                #section6 .section6-content h2 {
+                    font-size: 2.865vw;
+                    line-height: 3.906vw;
+                }
+            }
+
+            @media (max-width: 425px) {
+                #section6 .section6-content {
+                    width: 90%;
+                    max-width: none;
+                    padding: 7.529vw 4.706vw 0;
+                    align-self: start;
+                    justify-self: stretch;
+                }
+
+                #section6 .section6-content h2,
+                #section6 .section6-content p {
+                    max-width: none;
+                }
+
+                #section6 .section6-content h2 {
+                    font-size: 5.176vw;
+                    line-height: 6.588vw;
+                    margin-bottom: 3.765vw;
+                }
+
+                #section6 .section6-content p {
+                    font-size: 2.824vw;
+                    line-height: 4.235vw;
+                    margin-bottom: 2.824vw;
+                }
+            }
+        </style>
+        <div class="section6-wrapper">
+            <picture class="section6-banner">
+                <source
+                    srcset="https://cmsuatlupin.blob.core.windows.net/public/uploads/section6_mbl_banner_7ad130bb86.png"
+                    media="(max-width: 425px)" type="image/png">
+                <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/section6_banner_ed88d3f714.png"
+                    alt="Diverse professionals collaborating outside a modern office building">
+            </picture>
+            <div class="section6-content">
+                <h2>Committed to an Inclusive and Equal Workplace</h2>
+                <p>At Lupin, we believe in fostering an inclusive workplace where everyone feels welcomed, respected,
+                    supported, and inspired to contribute fully.</p>
+                <p>As an equal opportunity employer, we provide a workplace free from discrimination and creating
+                    opportunities based on potential and merit.</p>
+                <p>Through established Employee Resource Groups, continuous sensitization programs, return-to-work
+                    initiatives, we create an environment where individuals can grow at every stage of their careers.
+                </p>
+                <p>Our focus on gender neutrality, inclusive hiring, accessibility, and dedicated DEI programs reflects
+                    our belief that diverse teams build stronger solutions, stronger communities, and a stronger future.
+                </p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

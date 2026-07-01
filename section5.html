@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers Page - Section 5</title>
+</head>
+
+<body>
+    <section id="section5">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+            }
+
+            #section5 {
+                position: relative;
+                overflow: hidden;
+            }
+
+            #section5 .section5-wrapper {
+                position: relative;
+                display: grid;
+            }
+
+            #section5 .section5-banner,
+            #section5 .section5-content {
+                grid-area: 1 / 1;
+            }
+
+            #section5 .section5-banner img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            #section5 .section5-content {
+                align-self: center;
+                justify-self: start;
+                width: 37%;
+                padding: 0 0 0 3.646vw;
+                z-index: 2;
+            }
+
+            #section5 .section5-content h2 {
+                color: #FFF;
+                font-family: Inter, sans-serif;
+                font-size: 2.083vw;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 2.969vw;
+                margin: 0 0 1.667vw;
+            }
+
+            #section5 .section5-content p {
+                color: #FFF;
+                font-family: Inter, sans-serif;
+                font-size: 0.990vw;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 1.510vw;
+                margin: 0 0 1.354vw;
+            }
+
+            #section5 .section5-content p:last-of-type {
+                margin-bottom: 2.344vw;
+            }
+
+            #section5 .section5-btn {
+                display: inline-block;
+                border-radius: 1.406vw;
+                background: #FFF;
+                color: #08A03F;
+                font-family: Inter, sans-serif;
+                font-size: 1.146vw;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 1.354vw;
+                padding: 0.625vw 1.979vw;
+                border: none;
+                cursor: pointer;
+                text-decoration: none;
+            }
+
+            @media (max-width: 1024px) {
+                #section5 .section5-content {
+                    width: 50%;
+                    padding: 0 0 0 3.906vw;
+                }
+                #section5 .section5-content h2{
+                    font-size: 2.734vw;
+                    line-height: 3.516vw;
+                }
+                #section5 .section5-content p{
+                    font-size: 1.563vw;
+                    line-height: 2.637vw;
+                }
+                #section5 .section5-btn{
+                    font-size: 1.758vw; 
+                    padding: 0.977vw 3.516vw;
+                }
+            }
+
+            @media (max-width: 768px) {
+                #section5 .section5-content {
+                    width: 75%;
+                    padding: 4.167vw 5.208vw;
+                }
+
+                #section5 .section5-content h2 {
+                    font-size: 2.865vw;
+                    line-height: 3.906vw;
+                }
+
+                #section5 .section5-content p {
+                    font-size: 1.823vw;
+                    line-height: 2.214vw;
+                }
+                #section5 .section5-btn{
+                    font-size: 1.823vw; 
+                    padding: 1.781vw 3.646vw;
+                    border-radius: 4.146vw;
+                }
+            }
+
+            @media (max-width: 425px) {
+                #section5 .section5-content {
+                    width: 80%;
+                    padding: 7.529vw 0 0 4.706vw;
+                    align-self: start;
+                }
+                #section5 .section5-btn{
+                    font-size: 3.294vw;
+                    padding: 3.146vw 5vw;
+                    border-radius: 4.146vw;
+                    margin-top: 5vw;
+                }
+                #section5 .section5-content h2{
+                    font-size: 5.176vw;
+                    line-height: 6.588vw;
+                    margin-bottom: 10vw;
+                }
+                #section5 .section5-content p{
+                    font-size: 2.824vw;
+                    line-height: 4.235vw;
+                    margin-bottom: 2.824vw;
+                }
+            }
+        </style>
+        <div class="section5-wrapper">
+            <picture class="section5-banner">
+                <source
+                    srcset="https://cmsuatlupin.blob.core.windows.net/public/uploads/section5_mbl_banner_345a123966.png"
+                    media="(max-width: 425px)" type="image/png">
+                <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/section5_v2_banner_551e2b398f.png"
+                    alt="Person standing on a mountain overlooking misty valleys">
+            </picture>
+            <div class="section5-content">
+                <h2>Values That Define Us</h2>
+                <p>Integrity, Passion for Excellence, Teamwork, Entrepreneurial Spirit, Respect and Care, and Customer
+                    Focus are our values that guide us.</p>
+                <p>These values shape how we work together, support one another, and create meaningful impact for
+                    patients around the world. They drive our decisions, strengthen our culture, and help us stay
+                    accountable to the purpose we serve every day.</p>
+                <a href="#" class="section5-btn">Explore Our Values</a>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

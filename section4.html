@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers Page - Section 4</title>
+</head>
+
+<body>
+    <section id="section4">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+            }
+
+            #section4 {
+                background-color: #55968f;
+                padding: 4.167vw 3.646vw 5vw;
+                overflow: hidden;
+            }
+
+            #section4 .section4-wrapper {
+                position: relative;
+            }
+
+            #section4 .section4-header {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 3.021vw;
+                min-height: 5.990vw;
+            }
+
+            #section4 .section4-intro {
+                max-width: 45vw;
+                text-align: center;
+            }
+
+            #section4 .section4-intro h2 {
+                color: #FFF;
+                font-family: Inter, sans-serif;
+                font-size: 2.083vw;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 2.969vw;
+                margin: 0 0 0.990vw;
+            }
+
+            #section4 .section4-intro p {
+                color: #FFF;
+                font-family: Inter, sans-serif;
+                font-size: 0.990vw;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 1.510vw;
+                margin: 0;
+            }
+
+            #section4 .section4-nav {
+                position: absolute;
+                right: 0;
+                top: 4.167vw;
+                display: flex;
+                gap: 0.833vw;
+            }
+      
+            #section4 .section4-nav button {
+                width: 3.125vw;
+                height: 3.125vw;
+                border-radius: 50%;
+                border: none;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.667vw;
+                line-height: 1;
+                padding: 0;
+            }
+
+            #section4 .section4-prev {
+                background: rgba(0, 0, 0, 0.25);
+                color: #FFF;
+            }
+
+            #section4 .section4-next {
+                background: #FFF;
+                color: #2d6b64;
+            }
+
+            #section4 .section4-nav button:disabled {
+                opacity: 0.4;
+                cursor: not-allowed;
+            }
+
+            #section4 .section4-slider {
+                overflow: hidden;
+                width: calc(100% + 7.292vw);
+                margin-left: -3.646vw;
+                margin-right: -3.646vw;
+            }
+
+            #section4 .section4-track {
+                display: flex;
+                gap: 1.354vw;
+                transition: transform 0.4s ease;
+                will-change: transform;
+            }
+
+            @media (max-width: 768px) {
+                #section4 .section4-track {
+                    gap: 1.563vw;
+                }
+            }
+
+            #section4 .section4-slide {
+                flex: 0 0 calc((100% - 2.708vw) / 3);
+                border-radius: 1.146vw;
+                overflow: hidden;
+            }
+
+            #section4 .section4-slide img {
+                display: block;
+                width: 100%;
+                aspect-ratio: 16 / 10;
+                border-radius: 1.146vw;
+                object-fit: cover;
+            }
+
+            @media (max-width: 1024px) {
+                #section4 {
+                    padding: 3.906vw 3.906vw 4.883vw;
+                }
+
+                #section4 .section4-slider {
+                    width: calc(100% + 7.813vw);
+                    margin-left: -3.906vw;
+                    margin-right: -3.906vw;
+                }
+
+                #section4 .section4-slide {
+                    flex: 0 0 calc((100% - 1.563vw) / 2);
+                }
+                #section4 .section4-nav{
+                    top: 11.719vw;
+                }
+                #section4 .section4-nav button{
+                    width: 3.819vw;
+                    height: 3.819vw;
+                    font-size: 2.389vw;
+                }
+                #section4 .section4-intro h2{
+                    font-size: 2.734vw;
+                    line-height: 3.516vw;
+                }
+                #section4 .section4-intro p{
+                    font-size: 1.563vw;
+                    line-height: 2.637vw;
+                }
+                #section4 .section4-header{
+                    margin-bottom: 8.789vw;
+                }
+            }
+
+            @media (max-width: 768px) {
+                #section4 {
+                    padding: 4.688vw 3.125vw 5.208vw;
+                    overflow: hidden;
+                }
+
+                #section4 .section4-header {
+                    justify-content: flex-start;
+                    min-height: auto;
+                    margin-bottom: 2.604vw;
+                }
+
+                #section4 .section4-intro {
+                    max-width: none;
+                    text-align: left;
+                    margin-bottom: 5.208vw;
+                }
+
+                #section4 .section4-nav {
+                    position: static;
+                    transform: none;
+                    justify-content: center;
+                    margin-top: 3.125vw;
+                    gap: 3.563vw;
+                }
+
+                #section4 .section4-slider {
+                    overflow: visible;
+                    width: calc(100% + 5.208vw);
+                    margin-left: -2.604vw;
+                    margin-right: -2.604vw;
+                }
+
+                #section4 .section4-slide {
+                    flex: 0 0 62%;
+                }
+
+                #section4 .section4-slide img {
+                    border-radius: 2.865vw;
+                }
+                #section4 .section4-intro h2{
+                    font-size: 2.865vw;
+                    line-height: 3.646vw;
+                }
+                #section4 .section4-nav button{
+                    width: 5.51vw;
+                    height: 5.51vw;
+                    font-size: 3.51vw;
+                }
+                #section4 .section4-intro p{
+                    font-size: 1.823vw;
+                    line-height: 2.214vw;
+                    width: 90%;
+                }
+            }
+            @media (max-width: 425px) {
+                #section4{
+                    padding: 7.529vw 4.706vw 9.412vw;
+                }
+                #section4 .section4-intro h2 {
+                    font-size: 5.176vw;
+                    line-height: 7.059vw;
+                }
+                #section4 .section4-intro p{
+                    font-size: 2.824vw;
+                    line-height: 4vw;
+                }
+                #section4 .section4-nav{
+                    margin-top: 7.125vw;
+                }
+                #section4 .section4-nav button{
+                    width: 8.588vw;
+                    height: 8.588vw;
+                    font-size: 5vw;
+                }
+                #section4 .section4-slider{
+                    margin-left: -5vw;
+                    margin-right: -5vw;
+                }
+            }
+        </style>
+        <div class="section4-wrapper">
+            <div class="section4-header">
+                <div class="section4-intro">
+                    <h2>Step Inside Life at Lupin</h2>
+                    <p>At Lupin, we have built an inclusive ecosystem that drives employees to consistently do their
+                        best. Across functions, experiences, and locations, we foster a culture built on trust,
+                        collaboration, and shared purpose.</p>
+                </div>
+            </div>
+            <div class="section4-slider">
+                <div class="section4-track">
+                    <div class="section4-slide">
+                        <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/slider_v2_1_bf39437404.png"
+                            alt="Colleagues collaborating in an office">
+                    </div>
+                    <div class="section4-slide">
+                        <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/slider_v2_2_f63ec8cd47.png"
+                            alt="Team in laboratory facility">
+                    </div>
+                    <div class="section4-slide">
+                        <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/slider_v2_3_594b1f764c.png"
+                            alt="Lupin team group photo">
+                    </div>
+                    <div class="section4-slide">
+                        <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/slider_v2_1_bf39437404.png"
+                            alt="Colleagues collaborating in an office">
+                    </div>
+                    <div class="section4-slide">
+                        <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/slider_v2_2_f63ec8cd47.png"
+                            alt="Team in laboratory facility">
+                    </div>
+                    <div class="section4-slide">
+                        <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/slider_v2_3_594b1f764c.png"
+                            alt="Lupin team group photo">
+                    </div>
+                </div>
+            </div>
+            <div class="section4-nav">
+                <button type="button" class="section4-prev" aria-label="Previous slide">&#8249;</button>
+                <button type="button" class="section4-next" aria-label="Next slide">&#8250;</button>
+            </div>
+        </div>
+        <script>
+            (function () {
+                var section = document.getElementById('section4');
+                var track = section.querySelector('.section4-track');
+                var slides = section.querySelectorAll('.section4-slide');
+                var prevBtn = section.querySelector('.section4-prev');
+                var nextBtn = section.querySelector('.section4-next');
+                var currentIndex = 0;
+
+                function getGap() {
+                    if (window.innerWidth <= 768) return window.innerWidth * 0.625 / 100;
+                    return window.innerWidth * 1.354 / 100;
+                }
+
+                function getSlidesToShow() {
+                    if (window.innerWidth <= 768) {
+                        return 1;
+                    }
+                    if (window.innerWidth <= 1024) {
+                        return 2;
+                    }
+                    return 3;
+                }
+
+                function getMaxIndex() {
+                    return Math.max(0, slides.length - getSlidesToShow());
+                }
+
+                function updateSlider() {
+                    var maxIndex = getMaxIndex();
+                    var gap = getGap();
+
+                    if (currentIndex > maxIndex) {
+                        currentIndex = maxIndex;
+                    }
+                    if (currentIndex < 0) {
+                        currentIndex = 0;
+                    }
+
+                    var slideWidth = slides[0].getBoundingClientRect().width;
+                    track.style.transform = 'translateX(-' + (currentIndex * (slideWidth + gap)) + 'px)';
+
+                    prevBtn.disabled = currentIndex === 0;
+                    nextBtn.disabled = currentIndex >= maxIndex;
+                }
+
+                prevBtn.addEventListener('click', function () {
+                    if (currentIndex > 0) {
+                        currentIndex--;
+                        updateSlider();
+                    }
+                });
+
+                nextBtn.addEventListener('click', function () {
+                    if (currentIndex < getMaxIndex()) {
+                        currentIndex++;
+                        updateSlider();
+                    }
+                });
+
+                window.addEventListener('resize', updateSlider);
+                updateSlider();
+            })();
+        </script>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers Page - Section 8</title>
+</head>
+
+<body>
+    <section id="section8">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+            }
+
+            #section8 {
+                position: relative;
+            }
+
+            #section8 .section8-wrapper {
+                position: relative;
+                display: grid;
+            }
+
+            #section8 .section8-banner,
+            #section8 .section8-layout {
+                grid-area: 1 / 1;
+            }
+
+            #section8 .section8-banner img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                min-height: 100%;
+                object-fit: cover;
+            }
+
+            #section8 .section8-layout {
+                z-index: 2;
+                display: grid;
+                grid-template-columns: 36% 1fr;
+                grid-template-rows: auto 1fr;
+                align-items: center;
+                gap: 1.354vw 3.333vw;
+                padding: 4.167vw 5.208vw 0 3.646vw;
+                box-sizing: border-box;
+                width: 100%;
+                min-width: 0;
+            }
+
+            #section8 .section8-intro {
+                grid-column: 1;
+                grid-row: 1 / span 2;
+                align-self: center;
+                width: 80%;
+            }
+
+            #section8 .section8-intro h2 {
+                color: #FFF;
+                font-family: Inter, sans-serif;
+                font-size: 2.083vw;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 2.969vw;
+                margin: 0 0 1.354vw;
+            }
+
+            #section8 .section8-intro p {
+                color: #FFF;
+                font-family: Inter, sans-serif;
+                font-size: 0.990vw;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 1.510vw;
+                margin: 0 0 1.979vw;
+            }
+
+            #section8 .section8-btn {
+                display: inline-block;
+                border-radius: 1.406vw;
+                background: #FFF;
+                color: #000;
+                font-family: Inter, sans-serif;
+                font-size: 1.146vw;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 1.354vw;
+                padding: 0.625vw 2.292vw;
+                border: none;
+                cursor: pointer;
+                text-decoration: none;
+            }
+
+            #section8 .section8-nav {
+                grid-column: 2;
+                grid-row: 1;
+                justify-self: end;
+                display: flex;
+                gap: 0.833vw;
+                margin-right: 1.042vw;
+            }
+
+            #section8 .section8-nav button {
+                width: 3.125vw;
+                height: 3.125vw;
+                border-radius: 50%;
+                border: none;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.667vw;
+                line-height: 1;
+                padding: 0;
+            }
+
+            #section8 .section8-prev {
+                background: rgba(255, 255, 255, 0.2);
+                color: #FFF;
+            }
+
+            #section8 .section8-next {
+                background: #FFF;
+                color: #333;
+            }
+
+            #section8 .section8-nav button:disabled {
+                opacity: 0.4;
+                cursor: not-allowed;
+            }
+
+            #section8 .section8-slider {
+                grid-column: 2;
+                grid-row: 2;
+                overflow: hidden;
+                width: calc(100% + 2.604vw);
+                margin-right: -2.604vw;
+                min-width: 0;
+            }
+
+            #section8 .section8-track {
+                display: flex;
+                gap: 1.354vw;
+                transition: transform 0.4s ease;
+                will-change: transform;
+            }
+
+            #section8 .section8-slide {
+                flex: 0 0 calc((100% - 2.708vw) / 2.5);
+                min-width: 0;
+            }
+
+            #section8 .section8-slide img {
+                display: block;
+                width: 100%;
+                height: auto;
+                border-radius: 1.146vw;
+                object-fit: cover;
+            }
+
+            @media (min-width: 1024px) and (max-width: 1440px) {
+                #section8 .section8-layout {
+                    padding: 2.778vw 3.472vw 3.056vw 2.778vw;
+                    gap: 1.389vw 2.083vw;
+                }
+
+                #section8 .section8-slider {
+                    width: calc(100% + 1.389vw);
+                    margin-right: -1.389vw;
+                }
+
+                #section8 .section8-intro h2 {
+                    font-size: 2.734vw;
+                    line-height: 3.516vw;
+                }
+
+                #section8 .section8-intro {
+                    width: 100%;
+                }
+
+                #section8 .section8-slide {
+                    flex: 0 0 72%;
+                }
+
+                #section8 .section8-intro p {
+                    font-size: 1.563vw;
+                    line-height: 2.637vw;
+                }
+
+                #section8 .section8-btn {
+                    font-size: 1.25vw;
+                    padding: 0.694vw 2.5vw;
+                }
+
+                #section8 .section8-nav {
+                    margin-right: 0.694vw;
+                }
+
+                #section8 .section8-nav button {
+                    width: 3.819vw;
+                    height: 3.819vw;
+                    font-size: 2.389vw;
+                }
+            }
+
+            @media (max-width: 768px) {
+                #section8 {
+                    overflow: hidden;
+                }
+
+                #section8 .section8-layout {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: stretch;
+                    padding: 4.167vw 5.208vw 5.208vw;
+                    gap: 0;
+                }
+
+                #section8 .section8-intro {
+                    width: 70%;
+                    margin-bottom: 5.208vw;
+                    margin-right: auto;
+                    order: 1;
+                }
+
+                #section8 .section8-slider {
+                    overflow: visible;
+                    width: calc(100% + 5.208vw);
+                    margin-left: -2.604vw;
+                    margin-right: -2.604vw;
+                    order: 2;
+                }
+
+                #section8 .section8-track {
+                    gap: 1.563vw;
+                }
+
+                #section8 .section8-slide {
+                    flex: 0 0 85%;
+                }
+
+                #section8 .section8-slide img {
+                    border-radius: 2.865vw;
+                }
+
+                #section8 .section8-nav {
+                    position: static;
+                    justify-content: center;
+                    margin-top: 3.125vw;
+                    gap: 3.563vw;
+                    order: 3;
+                }
+                #section8 .section8-btn{
+                    font-size: 1.823vw;
+                    padding: 1.781vw 3.646vw;
+                    border-radius: 4.146vw;
+                }
+                #section8 .section8-intro h2{
+                    font-size: 2.865vw;
+                    line-height: 3.646vw;
+                }
+                #section8 .section8-nav button{
+                    width: 5.51vw;
+                    height: 5.51vw;
+                    font-size: 3.51vw;
+                }
+                #section8 .section8-intro p{
+                    font-size: 1.823vw;
+                    line-height: 3.214vw;
+                }
+            }
+            @media (max-width: 425px) {
+                #section8 .section8-layout {
+                    padding: 7.529vw 4.706vw 0;
+                }
+
+                #section8 .section8-intro{
+                    width: 90%;
+                    margin-bottom: 16vw;
+                }
+                #section8 .section8-intro h2{
+                    font-size: 5.176vw;
+                    line-height: 7.059vw;
+                    margin-bottom: 10vw;
+                }
+                #section8 .section8-intro p{
+                    font-size: 2.824vw;
+                    line-height: 4vw;
+                    max-width: 90%;
+                }
+                #section8 .section8-btn{
+                    font-size: 3.294vw;
+                    padding: 3.146vw 5vw;
+                    border-radius: 4.146vw;
+                    margin-top: 5vw;
+                }
+                #section8 .section8-slider {
+                    width: 100%;
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+                #section8 .section8-nav{
+                    margin-top: 7.125vw;
+                }
+                #section8 .section8-nav button{
+                    width: 8.588vw;
+                    height: 8.588vw;
+                    font-size: 5vw;
+                }
+            }
+        </style>
+        <div class="section8-wrapper">
+            <picture class="section8-banner">
+                <source
+                    srcset="https://cmsuatlupin.blob.core.windows.net/public/uploads/section_8_mbl_banner_a6142c7afa.png"
+                    media="(max-width: 425px)" type="image/png">
+                <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/section8_banner_8ab3cd628e.png"
+                    alt="Awards and recognition background">
+            </picture>
+            <div class="section8-layout">
+                <div class="section8-intro">
+                    <h2>Our Awards and Recognition</h2>
+                    <p>We are proud to be Great Place to Work® certified globally, with many employees reporting high
+                        engagement, satisfaction, and wellbeing. This reflects our culture that is grounded in trust,
+                        fairness, and inclusion across our 13 geographies.</p>
+                    <a href="#" class="section8-btn">Explore Our Achievements</a>
+                </div>
+                <div class="section8-slider">
+                    <div class="section8-track">
+                        <div class="section8-slide">
+                            <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/awards_1_e1842a86e3.png"
+                                alt="Hand holding a silver trophy at sunset">
+                        </div>
+                        <div class="section8-slide">
+                            <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/awards_2_876e60df32.png"
+                                alt="Great Place To Work Certified award on office wall">
+                        </div>
+                        <div class="section8-slide">
+                            <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/awards_1_e1842a86e3.png"
+                                alt="Hand holding a silver trophy at sunset">
+                        </div>
+                        <div class="section8-slide">
+                            <img src="https://cmsuatlupin.blob.core.windows.net/public/uploads/awards_2_876e60df32.png"
+                                alt="Great Place To Work Certified award on office wall">
+                        </div>
+                    </div>
+                </div>
+                <div class="section8-nav">
+                    <button type="button" class="section8-prev" aria-label="Previous slide">&#8249;</button>
+                    <button type="button" class="section8-next" aria-label="Next slide">&#8250;</button>
+                </div>
+            </div>
+        </div>
+        <script>
+            (function () {
+                var section = document.getElementById('section8');
+                var track = section.querySelector('.section8-track');
+                var slides = section.querySelectorAll('.section8-slide');
+                var prevBtn = section.querySelector('.section8-prev');
+                var nextBtn = section.querySelector('.section8-next');
+                var currentIndex = 0;
+
+                function getGap() {
+                    if (window.innerWidth <= 768) return window.innerWidth * 1.563 / 100;
+                    return window.innerWidth * 1.354 / 100;
+                }
+
+                function getSlidesToShow() {
+                    if (window.innerWidth <= 768) {
+                        return 1;
+                    }
+                    return 2.5;
+                }
+
+                function getMaxIndex() {
+                    return Math.max(0, Math.ceil(slides.length - getSlidesToShow()));
+                }
+
+                function updateSlider() {
+                    var maxIndex = getMaxIndex();
+                    var gap = getGap();
+
+                    if (currentIndex > maxIndex) {
+                        currentIndex = maxIndex;
+                    }
+                    if (currentIndex < 0) {
+                        currentIndex = 0;
+                    }
+
+                    var slideWidth = slides[0].getBoundingClientRect().width;
+                    track.style.transform = 'translateX(-' + (currentIndex * (slideWidth + gap)) + 'px)';
+
+                    prevBtn.disabled = currentIndex === 0;
+                    nextBtn.disabled = currentIndex >= maxIndex;
+                }
+
+                prevBtn.addEventListener('click', function () {
+                    if (currentIndex > 0) {
+                        currentIndex--;
+                        updateSlider();
+                    }
+                });
+
+                nextBtn.addEventListener('click', function () {
+                    if (currentIndex < getMaxIndex()) {
+                        currentIndex++;
+                        updateSlider();
+                    }
+                });
+
+                window.addEventListener('resize', updateSlider);
+                updateSlider();
+            })();
+        </script>
+    </section>
+</body>
+
+</html>
